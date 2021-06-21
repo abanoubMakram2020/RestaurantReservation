@@ -17,7 +17,7 @@ Steps to run project:
 -download from GitHub
 -Extract zib project file
 -Build soultion
--run migrations to tow Contexts ()and update datebase,seeding data will inserted 
+-run migrations to tow Contexts (ApplicationDbContext exists inside 'RestaurantReservation.Presentation.MVC' project and ResturantReservationDBContext exists inside 'RestaurantReservation.Infra.Data' project)and update datebase,seeding data will inserted 
 -run project and click login.
 -click 'Reservations' to go to reservations.
 -----------------------------------------------------------------------------
