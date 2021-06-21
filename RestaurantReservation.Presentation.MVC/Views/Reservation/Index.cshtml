@@ -1,0 +1,135 @@
+﻿@model List<RestaurantReservation.Domain.Models.Reservation>
+@using RestaurantReservation.Application.Resources
+@using System.Globalization
+@{ Layout = "~/Views/Shared/_ArLayout.cshtml";
+    int i = 0;
+    }
+
+<div class="box">
+    <div class="box-header">
+        <div class="row">
+            <div class="col-md-3">
+                <h3 class="box-title">@ReservationResources.Reservations</h3>
+            </div>
+            <div class="col-md-6"></div>
+            <div class="col-md-3">
+                <a class="btn btn-primary" id="Edite_status" href="@Url.Action("CreateEdit","Reservation")">
+                    @ReservationResources.AddNewReservation
+                </a>
+            </div>
+        </div>
+      
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <table id="tblReservations" class="table direction table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>@ReservationResources.ClientName</th>
+                    <th>@ReservationResources.TableNo</th>
+                    <th>@ReservationResources.NumberOfPeople</th>
+                    <th>@ReservationResources.ReservationDate</th>
+                    <th>@ReservationResources.ReservationFoods</th>
+                    <th>@ReservationResources.Notes</th>
+                    <th>@ReservationResources.Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var Reserv in Model)
+                { 
+    <tr>
+        <td>@(++i)</td>
+        <td>@Reserv.ClientName</td>
+        <td>@Reserv.Table.No</td>
+        <td>@Reserv.NumberOfPeople</td>
+
+        <td>@Reserv.ReservationDate</td>
+        <td>
+            <ul>
+                @foreach (var item in Reserv.ReservationFoods.Select(x => x.FoodType).ToList())
+                {
+
+<li>@(CultureInfo.CurrentCulture.Name.ToLower().Contains("ar") ? item.FoodNameAr:item.FoodNameEn)</li>
+}
+            </ul>
+        </td>
+        <td>@Reserv.Note</td>
+        <td>
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="label label-warning" id="Edite_status" href="@Url.Action("CreateEdit", new {rservId= Reserv.Id})">
+                        @ReservationResources.Edit
+                    </a>
+
+                </div>
+                <div class="col-md-3">
+                    <a class='label label-danger' href="@Url.Action("Delete", new { rservId=Reserv.Id})">
+                        @ReservationResources.Delete
+                    </a>
+
+                </div>
+                @*<div class="col-md-6">
+                    <button type="button" class="btn btn-info" onclick="getReservationFoods(@Reserv.Id);">
+                        @ReservationResources.ReservationFoods
+                    </button>
+
+                </div>*@
+            </div>
+
+        </td>
+    </tr>
+}
+
+            </tbody>
+
+        </table>
+    </div>
+    <!-- /.box-body -->
+</div>
+<!--<div id="mdlReservationFoods" class="modal fade" role="dialog">
+    <div class="modal-dialog">-->
+
+        <!-- Modal content-->
+        <!--<div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">  @ReservationResources.ReservationFoods</h4>
+            </div>
+            <div id="DivReservationFoods" class="modal-body">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">@ReservationResources.Close</button>
+        </div>
+    </div>
+
+</div>-->
+
+<!-- /.box -->
+<script>
+    $(function () {
+        $("#tblReservations").DataTable();
+
+    });
+    //function getReservationFoods(reservId) {
+    //    debugger
+    //    var AjaxDTO = { 'reservId': reservId };
+    //    /*   var DTO = { 'key': key };*/
+    //    $.ajax({
+    //        url: '/Reservation/GetReservationFoods',
+    //        data: JSON.stringify(AjaxDTO),
+    //        type: 'POST',
+    //        contentType: 'application/json;',
+    //        dataType: 'json',
+    //        async: false,
+    //        cache: false
+    //    }).success(function (data) {
+    //        debugger
+    //        console.log(data)
+    //    }).fail(function (data) {
+    //        alert("Failed");
+    //    });
+    //}
+</script>

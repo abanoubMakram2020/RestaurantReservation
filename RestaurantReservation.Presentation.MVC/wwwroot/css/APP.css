@@ -1,0 +1,8 @@
+﻿.required:before {
+    content: "*";
+    font-weight: bold;
+    color: red;
+    display: inline;
+    padding: 3px;
+    /*vertical-align:middle !important;*/
+}

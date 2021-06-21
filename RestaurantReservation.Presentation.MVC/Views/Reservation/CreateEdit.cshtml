@@ -1,0 +1,122 @@
+﻿@model RestaurantReservation.Application.DTOs.ReservationModel
+@using RestaurantReservation.Application.Resources
+@{
+    Layout = "~/Views/Shared/_ArLayout.cshtml";
+
+}
+<section class="content">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">@ReservationResources.AddNewReservation</h3>
+                </div>
+                <!-- /.box-header -->
+                <!-- form start -->
+                @using (Html.BeginForm("CreateEdit", "Reservation", FormMethod.Post))
+                {
+
+                    <div class="clearfix"></div>
+                    <div class="box-body">
+                        @Html.AntiForgeryToken()
+
+                        @Html.HiddenFor(p => p.Id)
+                        @Html.HiddenFor(p => p.ReservationDate)
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ClientName, new { @class = "control-label col-md-2 required" })
+                            <div class="col-md-5">
+                                @Html.TextBoxFor(model => model.ClientName, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ClientName, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <div class="clearfix"></div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.NumberOfPeople, new { @class = "control-label col-md-2 required" })
+                            <div class="col-md-5">
+                                @Html.TextBoxFor(model => model.NumberOfPeople, new { onkeypress = "return isNumberKey(event)", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.NumberOfPeople, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <div class="clearfix"></div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TableNo, new { @class = "control-label col-md-2 required" })
+                            <div class="col-md-5">
+                                @if (Model.Id == 0)
+                                {
+                                    @Html.DropDownListFor(model => model.TableNo, (IEnumerable<SelectListItem>)ViewBag.TablesList ??
+                              Enumerable.Empty<SelectListItem>(), @ReservationResources.Select, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.TableNo, null, new { @class = "text-danger" })
+                                }
+                                else
+                                {
+                                    <label>@Model.TableNo</label>
+                                    @Html.HiddenFor(p => p.TableNoId)
+                                    @Html.HiddenFor(p => p.TableNo)
+                                }
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <div class="clearfix"></div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.FoodTypes, new { @class = "control-label col-md-2 required" })
+                            <div class="col-md-5">
+                                @Html.ListBoxFor(model => model.FoodTypes, new MultiSelectList(ViewBag.FoodsList, "Value", "Text", Model.FoodTypes), new { @class = "form-control features-segments select2-multiselect-checkbox", multiple = "multiple" })
+
+                                @Html.ValidationMessageFor(model => model.FoodTypes, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+
+                        <div class="clearfix"></div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Note, new { @class = "control-label col-md-2 " })
+                            <div class="col-md-5">
+                                @Html.TextAreaFor(model => model.Note, new { @class = "form-control", })
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+
+            <div class="box-footer">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary">@ReservationResources.Save</button>
+
+                    <a class="btn btn-primary" id="Edite_status" href="@Url.Action("Index","Reservation")">
+                        @ReservationResources.Close
+                    </a>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+                }
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+
+<script>
+    function isNumberKey(evt) {
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode != 46 && charCode > 31
+            && (charCode < 48 || charCode > 57))
+            return false;
+
+        return true;
+    }
+
+</script>
