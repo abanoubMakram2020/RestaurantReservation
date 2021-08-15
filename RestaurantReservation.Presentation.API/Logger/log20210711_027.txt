@@ -1,0 +1,23 @@
+2021-07-11 14:19:15.173 +02:00 [INF] Route matched with {action = "Registration", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registration(RestaurantReservation.Application.DTOs.UserRegistrationDTO) on controller RestaurantReservation.Presentation.API.Controllers.AccountController (RestaurantReservation.Presentation.API).
+2021-07-11 14:19:21.193 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-11 14:19:22.372 +02:00 [INF] Executed DbCommand (92ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2021-07-11 14:19:22.629 +02:00 [WRN] User validation failed: DuplicateUserName.
+2021-07-11 14:20:59.695 +02:00 [INF] User profile is available. Using 'C:\Users\A.Makram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-07-11 14:21:00.196 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-11 14:21:00.196 +02:00 [INF] Hosting environment: Development
+2021-07-11 14:21:00.196 +02:00 [INF] Content root path: D:\RestaurantReservation\RestaurantReservation.Presentation.API
+2021-07-11 14:21:00.272 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/index.html - -
+2021-07-11 14:21:00.531 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/index.html - - - 200 - text/html;charset=utf-8 261.5468ms
+2021-07-11 14:21:00.919 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - -
+2021-07-11 14:21:01.095 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - - - 200 - application/json;charset=utf-8 175.9126ms
+2021-07-11 14:21:37.674 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44360/api/Account/Registration application/json 116
+2021-07-11 14:21:37.847 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.API.Controllers.AccountController.Registration (RestaurantReservation.Presentation.API)'
+2021-07-11 14:21:56.545 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.API.Controllers.AccountController.Registration (RestaurantReservation.Presentation.API)'
+2021-07-11 14:21:56.555 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44360/api/Account/Registration application/json 116 - 200 126 application/json 18886.7186ms
+2021-07-11 14:22:01.215 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44360/api/Account/Registration application/json 116
+2021-07-11 14:22:01.219 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.API.Controllers.AccountController.Registration (RestaurantReservation.Presentation.API)'
+2021-07-11 14:22:10.273 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.API.Controllers.AccountController.Registration (RestaurantReservation.Presentation.API)'
+2021-07-11 14:22:10.273 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44360/api/Account/Registration application/json 116 - 200 134 application/json 9058.7019ms

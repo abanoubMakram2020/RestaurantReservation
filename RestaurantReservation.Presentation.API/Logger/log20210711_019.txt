@@ -1,0 +1,20 @@
+2021-07-11 13:22:50.288 +02:00 [INF] Route matched with {action = "Registration", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registration(RestaurantReservation.Application.DTOs.UserRegistrationDTO) on controller RestaurantReservation.Presentation.API.Controllers.AccountController (RestaurantReservation.Presentation.API).
+2021-07-11 13:23:07.629 +02:00 [WRN] User password validation failed: PasswordRequiresNonAlphanumeric;PasswordRequiresDigit;PasswordRequiresUpper.
+2021-07-11 13:23:07.723 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/json
+2021-07-11 13:23:07.735 +02:00 [INF] Executed action RestaurantReservation.Presentation.API.Controllers.AccountController.Registration (RestaurantReservation.Presentation.API) in 17414.8854ms
+2021-07-11 13:23:37.029 +02:00 [INF] Route matched with {action = "Registration", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registration(RestaurantReservation.Application.DTOs.UserRegistrationDTO) on controller RestaurantReservation.Presentation.API.Controllers.AccountController (RestaurantReservation.Presentation.API).
+2021-07-11 13:23:40.463 +02:00 [WRN] User password validation failed: PasswordTooShort;PasswordRequiresNonAlphanumeric;PasswordRequiresDigit;PasswordRequiresUpper.
+2021-07-11 13:23:40.463 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/json
+2021-07-11 13:23:40.465 +02:00 [INF] Executed action RestaurantReservation.Presentation.API.Controllers.AccountController.Registration (RestaurantReservation.Presentation.API) in 3436.5924ms
+2021-07-11 13:24:00.884 +02:00 [INF] Route matched with {action = "Registration", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registration(RestaurantReservation.Application.DTOs.UserRegistrationDTO) on controller RestaurantReservation.Presentation.API.Controllers.AccountController (RestaurantReservation.Presentation.API).
+2021-07-11 13:24:06.171 +02:00 [WRN] User password validation failed: PasswordTooShort;PasswordRequiresNonAlphanumeric;PasswordRequiresDigit;PasswordRequiresUpper.
+2021-07-11 13:24:56.162 +02:00 [INF] User profile is available. Using 'C:\Users\A.Makram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-07-11 13:24:56.672 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-11 13:24:56.672 +02:00 [INF] Hosting environment: Development
+2021-07-11 13:24:56.673 +02:00 [INF] Content root path: D:\RestaurantReservation\RestaurantReservation.Presentation.API
+2021-07-11 13:24:56.730 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/index.html - -
+2021-07-11 13:24:56.917 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/index.html - - - 200 - text/html;charset=utf-8 180.4048ms
+2021-07-11 13:24:57.206 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - -
+2021-07-11 13:24:57.434 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - - - 200 - application/json;charset=utf-8 228.9761ms
+2021-07-11 13:26:36.547 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44360/api/Account/Registration application/json 117
+2021-07-11 13:26:36.742 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.API.Controllers.AccountController.Registration (RestaurantReservation.Presentation.API)'

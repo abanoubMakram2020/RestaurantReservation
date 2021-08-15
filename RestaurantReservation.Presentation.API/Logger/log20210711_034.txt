@@ -1,0 +1,311 @@
+2021-07-11 15:56:47.281 +02:00 [INF] Route matched with {action = "ForgetPassword", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ForgetPassword(RestaurantReservation.Application.DTOs.UserRegistrationDTO) on controller RestaurantReservation.Presentation.API.Controllers.AccountController (RestaurantReservation.Presentation.API).
+2021-07-11 15:56:53.750 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-11 15:56:54.650 +02:00 [INF] Executed DbCommand (54ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-07-11 15:56:59.106 +02:00 [INF] Executed DbCommand (24ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2021-07-11 15:56:59.387 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p14='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p15='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [SecurityStamp] = @p11, [TwoFactorEnabled] = @p12, [UserName] = @p13
+WHERE [Id] = @p14 AND [ConcurrencyStamp] = @p15;
+SELECT @@ROWCOUNT;
+2021-07-11 15:57:02.683 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/json
+2021-07-11 15:57:02.700 +02:00 [INF] Executed action RestaurantReservation.Presentation.API.Controllers.AccountController.ForgetPassword (RestaurantReservation.Presentation.API) in 15376.7377ms
+2021-07-11 15:57:48.036 +02:00 [INF] Route matched with {action = "Login", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestaurantReservation.Application.DTOs.UserDTO) on controller RestaurantReservation.Presentation.API.Controllers.AccountController (RestaurantReservation.Presentation.API).
+2021-07-11 15:57:48.083 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-11 15:57:48.089 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-07-11 15:57:48.296 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/json
+2021-07-11 15:57:48.298 +02:00 [INF] Executed action RestaurantReservation.Presentation.API.Controllers.AccountController.Login (RestaurantReservation.Presentation.API) in 262.0396ms
+2021-07-11 16:13:59.409 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-11 16:14:26.895 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-11 16:14:27.315 +02:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-07-11 16:14:27.348 +02:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2021-07-11 16:14:27.351 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-07-11 16:14:27.352 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2021-07-11 16:14:27.362 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2021-07-11 16:14:27.379 +02:00 [INF] Applying migration '20210711141359_add token to user table'.
+2021-07-11 16:14:27.409 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20210711141359_add token to user table', N'5.0.7');
+2021-07-11 16:19:18.762 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-11 16:19:32.630 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-11 16:19:33.405 +02:00 [INF] Executed DbCommand (323ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [ResturantReservationIdentityDB];
+2021-07-11 16:19:33.461 +02:00 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [ResturantReservationIdentityDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2021-07-11 16:19:33.483 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-07-11 16:19:33.588 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2021-07-11 16:19:33.590 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-07-11 16:19:33.615 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2021-07-11 16:19:33.621 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2021-07-11 16:19:33.640 +02:00 [INF] Applying migration '20210711141918_initialData'.
+2021-07-11 16:19:33.699 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+2021-07-11 16:19:33.701 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUsers] (
+    [Id] nvarchar(450) NOT NULL,
+    [Token] nvarchar(max) NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id])
+);
+2021-07-11 16:19:33.704 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+);
+2021-07-11 16:19:33.706 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2021-07-11 16:19:33.708 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(128) NOT NULL,
+    [ProviderKey] nvarchar(128) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2021-07-11 16:19:33.720 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2021-07-11 16:19:33.722 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(128) NOT NULL,
+    [Name] nvarchar(128) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2021-07-11 16:19:33.726 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);
+2021-07-11 16:19:34.134 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL;
+2021-07-11 16:19:34.136 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);
+2021-07-11 16:19:34.137 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);
+2021-07-11 16:19:34.138 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);
+2021-07-11 16:19:34.139 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
+2021-07-11 16:19:34.140 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;
+2021-07-11 16:19:34.142 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20210711141918_initialData', N'5.0.7');
+2021-07-11 16:20:38.744 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ResturantReservationDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-11 16:20:56.131 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ResturantReservationDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-11 16:20:56.757 +02:00 [INF] Executed DbCommand (214ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [ResturantReservationDB];
+2021-07-11 16:20:56.806 +02:00 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [ResturantReservationDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2021-07-11 16:20:56.828 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-07-11 16:20:56.934 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2021-07-11 16:20:56.936 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-07-11 16:20:56.960 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2021-07-11 16:20:56.968 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2021-07-11 16:20:56.987 +02:00 [INF] Applying migration '20210711142039_initialData'.
+2021-07-11 16:20:57.053 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Table] (
+    [Id] int NOT NULL IDENTITY,
+    [No] int NOT NULL,
+    CONSTRAINT [PK_Table] PRIMARY KEY ([Id])
+);
+2021-07-11 16:20:57.054 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Unit] (
+    [Id] int NOT NULL IDENTITY,
+    [NameAr] nvarchar(50) NOT NULL,
+    [NameEn] nvarchar(50) NOT NULL,
+    CONSTRAINT [PK_Unit] PRIMARY KEY ([Id])
+);
+2021-07-11 16:20:57.056 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Reservation] (
+    [Id] int NOT NULL IDENTITY,
+    [ClientName] nvarchar(50) NOT NULL,
+    [TableNo] int NOT NULL,
+    [NumberOfPeople] int NOT NULL,
+    [ReservationDate] datetime2 NOT NULL,
+    [Note] nvarchar(max) NULL,
+    CONSTRAINT [PK_Reservation] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Reservation_Table_TableNo] FOREIGN KEY ([TableNo]) REFERENCES [Table] ([Id]) ON DELETE CASCADE
+);
+2021-07-11 16:20:57.058 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [FoodType] (
+    [Id] int NOT NULL IDENTITY,
+    [FoodNameAr] nvarchar(50) NOT NULL,
+    [FoodNameEn] nvarchar(50) NOT NULL,
+    [FoodSellUnit] int NOT NULL,
+    CONSTRAINT [PK_FoodType] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_FoodType_Unit_FoodSellUnit] FOREIGN KEY ([FoodSellUnit]) REFERENCES [Unit] ([Id]) ON DELETE CASCADE
+);
+2021-07-11 16:20:57.059 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ReservationFoods] (
+    [Id] int NOT NULL IDENTITY,
+    [ReservationId] int NOT NULL,
+    [FoodTypeId] int NOT NULL,
+    CONSTRAINT [PK_ReservationFoods] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_ReservationFoods_FoodType_FoodTypeId] FOREIGN KEY ([FoodTypeId]) REFERENCES [FoodType] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_ReservationFoods_Reservation_ReservationId] FOREIGN KEY ([ReservationId]) REFERENCES [Reservation] ([Id]) ON DELETE CASCADE
+);
+2021-07-11 16:20:57.091 +02:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'No') AND [object_id] = OBJECT_ID(N'[Table]'))
+    SET IDENTITY_INSERT [Table] ON;
+INSERT INTO [Table] ([Id], [No])
+VALUES (1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10);
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'No') AND [object_id] = OBJECT_ID(N'[Table]'))
+    SET IDENTITY_INSERT [Table] OFF;
+2021-07-11 16:20:57.102 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'NameAr', N'NameEn') AND [object_id] = OBJECT_ID(N'[Unit]'))
+    SET IDENTITY_INSERT [Unit] ON;
+INSERT INTO [Unit] ([Id], [NameAr], [NameEn])
+VALUES (1, N'كيلو', N'Killo'),
+(2, N'طبق', N'Dish'),
+(3, N'طاجن', N'Casserole');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'NameAr', N'NameEn') AND [object_id] = OBJECT_ID(N'[Unit]'))
+    SET IDENTITY_INSERT [Unit] OFF;
+2021-07-11 16:20:57.115 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'FoodNameAr', N'FoodNameEn', N'FoodSellUnit') AND [object_id] = OBJECT_ID(N'[FoodType]'))
+    SET IDENTITY_INSERT [FoodType] ON;
+INSERT INTO [FoodType] ([Id], [FoodNameAr], [FoodNameEn], [FoodSellUnit])
+VALUES (1, N'لحمة', N'meat', 1),
+(2, N'فراخ', N'chicken', 1),
+(3, N'طاجن جمبري', N'Shrimp Casserole', 2),
+(4, N'طاجن لحمة', N'Meat Casserole', 2),
+(5, N'سلطة خضرا', N'green salad', 3);
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'FoodNameAr', N'FoodNameEn', N'FoodSellUnit') AND [object_id] = OBJECT_ID(N'[FoodType]'))
+    SET IDENTITY_INSERT [FoodType] OFF;
+2021-07-11 16:20:57.393 +02:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_FoodType_FoodSellUnit] ON [FoodType] ([FoodSellUnit]);
+2021-07-11 16:20:57.395 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Reservation_TableNo] ON [Reservation] ([TableNo]);
+2021-07-11 16:20:57.396 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ReservationFoods_FoodTypeId] ON [ReservationFoods] ([FoodTypeId]);
+2021-07-11 16:20:57.398 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ReservationFoods_ReservationId] ON [ReservationFoods] ([ReservationId]);
+2021-07-11 16:20:57.400 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20210711142039_initialData', N'5.0.7');
+2021-07-11 16:55:30.947 +02:00 [INF] User profile is available. Using 'C:\Users\A.Makram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-07-11 16:55:31.502 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-11 16:55:31.502 +02:00 [INF] Hosting environment: Development
+2021-07-11 16:55:31.502 +02:00 [INF] Content root path: D:\RestaurantReservation\RestaurantReservation.Presentation.API
+2021-07-11 16:55:31.565 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/index.html - -
+2021-07-11 16:55:31.780 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/index.html - - - 200 - text/html;charset=utf-8 218.5723ms
+2021-07-11 16:55:32.105 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - -
+2021-07-11 16:55:32.296 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - - - 200 - application/json;charset=utf-8 190.8815ms
+2021-07-11 16:56:05.498 +02:00 [INF] User profile is available. Using 'C:\Users\A.Makram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-07-11 16:56:06.037 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-11 16:56:06.037 +02:00 [INF] Hosting environment: Development
+2021-07-11 16:56:06.037 +02:00 [INF] Content root path: D:\RestaurantReservation\RestaurantReservation.Presentation.API
+2021-07-11 16:56:06.098 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/index.html - -
+2021-07-11 16:56:06.275 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/index.html - - - 200 - text/html;charset=utf-8 182.4160ms
+2021-07-11 16:56:06.599 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - -
+2021-07-11 16:56:06.736 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - - - 200 - application/json;charset=utf-8 137.5742ms
+2021-07-11 16:57:11.542 +02:00 [INF] User profile is available. Using 'C:\Users\A.Makram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-07-11 16:57:11.957 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-11 16:57:11.958 +02:00 [INF] Hosting environment: Development
+2021-07-11 16:57:11.958 +02:00 [INF] Content root path: D:\RestaurantReservation\RestaurantReservation.Presentation.API
+2021-07-11 16:57:12.012 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/index.html - -
+2021-07-11 16:57:12.174 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/index.html - - - 200 - text/html;charset=utf-8 165.1968ms
+2021-07-11 16:57:12.459 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - -
+2021-07-11 16:57:12.598 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - - - 200 - application/json;charset=utf-8 139.4256ms
+2021-07-11 16:58:57.619 +02:00 [INF] User profile is available. Using 'C:\Users\A.Makram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-07-11 16:58:58.050 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-11 16:58:58.051 +02:00 [INF] Hosting environment: Development
+2021-07-11 16:58:58.051 +02:00 [INF] Content root path: D:\RestaurantReservation\RestaurantReservation.Presentation.API
+2021-07-11 16:58:58.108 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/index.html - -
+2021-07-11 16:58:58.263 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/index.html - - - 200 - text/html;charset=utf-8 155.2147ms
+2021-07-11 16:58:58.547 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - -
+2021-07-11 16:58:58.734 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - - - 200 - application/json;charset=utf-8 186.6277ms
+2021-07-11 16:59:57.598 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44360/api/Account/Registration application/json 134
+2021-07-11 16:59:57.745 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.API.Controllers.AccountController.Registration (RestaurantReservation.Presentation.API)'
+2021-07-11 17:00:11.490 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.API.Controllers.AccountController.Registration (RestaurantReservation.Presentation.API)'
+2021-07-11 17:00:11.716 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44360/api/Account/Registration application/json 134 - 200 - application/json 14118.1720ms
+2021-07-11 17:00:30.647 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44360/api/Account/Registration application/json 134
+2021-07-11 17:00:30.664 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.API.Controllers.AccountController.Registration (RestaurantReservation.Presentation.API)'

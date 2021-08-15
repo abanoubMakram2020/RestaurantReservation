@@ -1,0 +1,78 @@
+2021-07-11 10:13:03.607 +02:00 [INF] Route matched with {action = "Registration", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registration(RestaurantReservation.Application.DTOs.UserRegistrationDTO) on controller RestaurantReservation.Presentation.API.Controllers.AccountController (RestaurantReservation.Presentation.API).
+2021-07-11 10:13:11.535 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-11 10:13:12.502 +02:00 [INF] Executed DbCommand (68ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2021-07-11 10:13:12.826 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2021-07-11 10:13:15.453 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/json
+2021-07-11 10:13:15.468 +02:00 [INF] Executed action RestaurantReservation.Presentation.API.Controllers.AccountController.Registration (RestaurantReservation.Presentation.API) in 11825.8676ms
+2021-07-11 10:14:11.305 +02:00 [INF] Route matched with {action = "Login", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestaurantReservation.Application.DTOs.UserDTO) on controller RestaurantReservation.Presentation.API.Controllers.AccountController (RestaurantReservation.Presentation.API).
+2021-07-11 10:14:15.130 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-11 10:14:15.176 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-07-11 10:14:47.558 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/json
+2021-07-11 10:14:47.558 +02:00 [INF] Executed action RestaurantReservation.Presentation.API.Controllers.AccountController.Login (RestaurantReservation.Presentation.API) in 36253.4957ms
+2021-07-11 10:15:19.796 +02:00 [INF] Route matched with {action = "Login", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestaurantReservation.Application.DTOs.UserDTO) on controller RestaurantReservation.Presentation.API.Controllers.AccountController (RestaurantReservation.Presentation.API).
+2021-07-11 10:15:25.372 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-11 10:15:25.383 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-07-11 10:15:37.838 +02:00 [INF] Executed action RestaurantReservation.Presentation.API.Controllers.AccountController.Login (RestaurantReservation.Presentation.API) in 18041.9794ms
+2021-07-11 10:15:44.968 +02:00 [ERR] IDX12401: Expires: 'System.DateTime' must be after NotBefore: 'System.DateTime'.
+System.ArgumentException: IDX12401: Expires: 'System.DateTime' must be after NotBefore: 'System.DateTime'.
+   at System.IdentityModel.Tokens.Jwt.JwtPayload.AddFirstPriorityClaims(String issuer, String audience, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt)
+   at System.IdentityModel.Tokens.Jwt.JwtPayload..ctor(String issuer, String audience, IEnumerable`1 claims, IDictionary`2 claimsCollection, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityTokenPrivate(String issuer, String audience, ClaimsIdentity subject, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt, SigningCredentials signingCredentials, EncryptingCredentials encryptingCredentials, IDictionary`2 claimCollection, String tokenType)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor)
+   at SharedKernal.Middlewares.JWTSettings.JWTTokenHandler.CreateToken(List`1 userClaims, Audiance audience) in D:\RestaurantReservation\SharedKernal.Middlewares\JWTSettings\JWTTokenHandler.cs:line 65
+   at RestaurantReservation.Application.Services.AccountService.Login(BaseRequestDto`1 userDTO) in D:\RestaurantReservation\RestaurantReservation.Application\Services\AccountService.cs:line 58
+   at SharedKernal.Middlewares.Basees.Presenter.Handle[TRequest,TResponse](Func`2 serviceRequest, BaseRequestDto`1 request) in D:\RestaurantReservation\SharedKernal.Middlewares\Basees\Presenter.cs:line 36
+   at RestaurantReservation.Presentation.API.Controllers.AccountController.Login(UserDTO userDTO) in D:\RestaurantReservation\RestaurantReservation.Presentation.API\Controllers\AccountController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at SharedKernal.Middlewares.Exception.ExceptionHandler.Invoke(HttpContext context) in D:\RestaurantReservation\SharedKernal.Middlewares\Exception\ExceptionHandler.cs:line 36
+2021-07-11 10:16:29.537 +02:00 [INF] Route matched with {action = "Login", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(RestaurantReservation.Application.DTOs.UserDTO) on controller RestaurantReservation.Presentation.API.Controllers.AccountController (RestaurantReservation.Presentation.API).
+2021-07-11 10:16:31.964 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-11 10:16:31.971 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-07-11 10:18:26.686 +02:00 [INF] User profile is available. Using 'C:\Users\A.Makram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-07-11 10:18:27.165 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-11 10:18:27.165 +02:00 [INF] Hosting environment: Development
+2021-07-11 10:18:27.166 +02:00 [INF] Content root path: D:\RestaurantReservation\RestaurantReservation.Presentation.API
+2021-07-11 10:18:27.220 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/index.html - -
+2021-07-11 10:18:27.406 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/index.html - - - 200 - text/html;charset=utf-8 186.9963ms
+2021-07-11 10:18:27.700 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - -
+2021-07-11 10:18:27.895 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - - - 200 - application/json;charset=utf-8 195.3227ms
+2021-07-11 10:18:48.891 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44360/api/Account/Login application/json 59
+2021-07-11 10:18:49.093 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.API.Controllers.AccountController.Login (RestaurantReservation.Presentation.API)'
+2021-07-11 10:19:04.532 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.API.Controllers.AccountController.Login (RestaurantReservation.Presentation.API)'
+2021-07-11 10:19:04.539 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44360/api/Account/Login application/json 59 - 200 550 application/json 15648.1290ms
+2021-07-11 10:19:32.567 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/api/v1.0/Reservation/Index - -
+2021-07-11 10:19:32.599 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/api/v1.0/Reservation/Index - - - 401 - - 32.2530ms
+2021-07-11 10:19:56.221 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/api/v1.0/Reservation/Index - -
+2021-07-11 10:19:56.326 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.API.Controllers.ReservationController.Index (RestaurantReservation.Presentation.API)'
+2021-07-11 10:19:56.878 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.API.Controllers.ReservationController.Index (RestaurantReservation.Presentation.API)'
+2021-07-11 10:19:56.885 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/api/v1.0/Reservation/Index - - - 200 79 application/json 663.3727ms

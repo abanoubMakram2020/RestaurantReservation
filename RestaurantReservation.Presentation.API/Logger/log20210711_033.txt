@@ -1,0 +1,23 @@
+2021-07-11 15:54:46.573 +02:00 [INF] Route matched with {action = "ForgetPassword", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ForgetPassword(RestaurantReservation.Application.DTOs.UserRegistrationDTO) on controller RestaurantReservation.Presentation.API.Controllers.AccountController (RestaurantReservation.Presentation.API).
+2021-07-11 15:54:55.733 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-11 15:54:56.691 +02:00 [INF] Executed DbCommand (71ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-07-11 15:55:01.783 +02:00 [WRN] Change password failed for user.
+2021-07-11 15:55:58.557 +02:00 [INF] User profile is available. Using 'C:\Users\A.Makram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-07-11 15:55:58.988 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-11 15:55:58.989 +02:00 [INF] Hosting environment: Development
+2021-07-11 15:55:58.989 +02:00 [INF] Content root path: D:\RestaurantReservation\RestaurantReservation.Presentation.API
+2021-07-11 15:55:59.046 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/index.html - -
+2021-07-11 15:55:59.244 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/index.html - - - 200 - text/html;charset=utf-8 185.0069ms
+2021-07-11 15:55:59.532 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - -
+2021-07-11 15:55:59.810 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - - - 200 - application/json;charset=utf-8 278.0572ms
+2021-07-11 15:56:46.968 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44360/api/Account/ForgetPassword application/json 99
+2021-07-11 15:56:47.173 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.API.Controllers.AccountController.ForgetPassword (RestaurantReservation.Presentation.API)'
+2021-07-11 15:57:02.701 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.API.Controllers.AccountController.ForgetPassword (RestaurantReservation.Presentation.API)'
+2021-07-11 15:57:02.719 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44360/api/Account/ForgetPassword application/json 99 - 200 100 application/json 15750.6361ms
+2021-07-11 15:57:47.994 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44360/api/Account/Login application/json 64
+2021-07-11 15:57:48.005 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.API.Controllers.AccountController.Login (RestaurantReservation.Presentation.API)'
+2021-07-11 15:57:48.298 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.API.Controllers.AccountController.Login (RestaurantReservation.Presentation.API)'
+2021-07-11 15:57:48.300 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44360/api/Account/Login application/json 64 - 200 551 application/json 306.6075ms

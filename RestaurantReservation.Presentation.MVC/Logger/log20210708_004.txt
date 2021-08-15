@@ -1,0 +1,305 @@
+2021-07-08 14:47:45.949 +02:00 [INF] Executing ViewResult, running view Index.
+2021-07-08 14:47:46.028 +02:00 [INF] Executed ViewResult - view Index executed in 81.0257ms.
+2021-07-08 14:47:46.388 +02:00 [INF] Executing JsonResult, writing value of type 'System.String'.
+2021-07-08 14:47:46.426 +02:00 [INF] Executing JsonResult, writing value of type 'System.String'.
+2021-07-08 14:47:46.461 +02:00 [INF] Executing JsonResult, writing value of type 'System.String'.
+2021-07-08 14:47:46.473 +02:00 [INF] Executing JsonResult, writing value of type 'System.String'.
+2021-07-08 14:47:46.484 +02:00 [INF] Executing JsonResult, writing value of type 'System.String'.
+2021-07-08 14:47:46.496 +02:00 [INF] Executing JsonResult, writing value of type 'System.String'.
+2021-07-08 14:47:46.508 +02:00 [INF] Executing JsonResult, writing value of type 'System.String'.
+2021-07-08 14:47:51.032 +02:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2021-07-08 14:47:51.034 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2021-07-08 14:47:51.034 +02:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2021-07-08 14:47:51.035 +02:00 [INF] User logged out.
+2021-07-08 14:47:51.046 +02:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2021-07-08 14:47:51.068 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2021-07-08 14:47:58.105 +02:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2021-07-08 14:47:58.118 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2021-07-08 14:58:07.018 +02:00 [INF] User profile is available. Using 'C:\Users\A.Makram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-07-08 14:58:07.407 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-08 14:58:07.408 +02:00 [INF] Hosting environment: Development
+2021-07-08 14:58:07.408 +02:00 [INF] Content root path: D:\RestaurantReservation\RestaurantReservation.Presentation.MVC
+2021-07-08 14:58:07.473 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/ - -
+2021-07-08 14:58:07.562 +02:00 [INF] Executing endpoint '/Index'
+2021-07-08 14:58:07.645 +02:00 [INF] Route matched with {page = "/Index", action = "", controller = "", area = ""}. Executing page /Index
+2021-07-08 14:58:07.658 +02:00 [INF] Executing handler method RestaurantReservation.Presentation.MVC.Pages.IndexModel.OnGet - ModelState is "Valid"
+2021-07-08 14:58:07.661 +02:00 [INF] Executed handler method OnGet, returned result .
+2021-07-08 14:58:07.666 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-07-08 14:58:07.666 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-07-08 15:02:47.025 +02:00 [INF] User profile is available. Using 'C:\Users\A.Makram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-07-08 15:02:47.359 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-08 15:02:47.360 +02:00 [INF] Hosting environment: Development
+2021-07-08 15:02:47.360 +02:00 [INF] Content root path: D:\RestaurantReservation\RestaurantReservation.Presentation.MVC
+2021-07-08 15:02:47.424 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/ - -
+2021-07-08 15:02:47.524 +02:00 [INF] Executing endpoint '/Index'
+2021-07-08 15:02:47.600 +02:00 [INF] Route matched with {page = "/Index", action = "", controller = "", area = ""}. Executing page /Index
+2021-07-08 15:02:47.612 +02:00 [INF] Executing handler method RestaurantReservation.Presentation.MVC.Pages.IndexModel.OnGet - ModelState is "Valid"
+2021-07-08 15:02:47.616 +02:00 [INF] Executed handler method OnGet, returned result .
+2021-07-08 15:02:47.623 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-07-08 15:02:47.624 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-07-08 15:02:48.037 +02:00 [INF] Executed page /Index in 431.0592ms
+2021-07-08 15:02:48.083 +02:00 [INF] Executed endpoint '/Index'
+2021-07-08 15:02:48.111 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/ - - - 200 - text/html;+charset=utf-8 695.0033ms
+2021-07-08 15:02:52.067 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Identity/Account/Register - -
+2021-07-08 15:02:52.083 +02:00 [INF] Executing endpoint '/Account/Register'
+2021-07-08 15:02:52.120 +02:00 [INF] Route matched with {page = "/Account/Register", area = "Identity", action = "", controller = ""}. Executing page /Account/Register
+2021-07-08 15:02:52.134 +02:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal.RegisterModel.OnGetAsync - ModelState is "Valid"
+2021-07-08 15:02:52.137 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2021-07-08 15:02:52.137 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-07-08 15:02:52.137 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-07-08 15:02:52.225 +02:00 [INF] Executed page /Account/Register in 104.546ms
+2021-07-08 15:02:52.225 +02:00 [INF] Executed endpoint '/Account/Register'
+2021-07-08 15:02:52.227 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Identity/Account/Register - - - 200 - text/html;+charset=utf-8 159.1891ms
+2021-07-08 15:02:58.350 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Identity/Account/Login - -
+2021-07-08 15:02:58.367 +02:00 [INF] Executing endpoint '/Account/Login'
+2021-07-08 15:02:58.375 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2021-07-08 15:02:58.384 +02:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal.LoginModel.OnGetAsync - ModelState is "Valid"
+2021-07-08 15:02:58.396 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2021-07-08 15:02:58.396 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2021-07-08 15:02:58.396 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-07-08 15:02:58.396 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-07-08 15:02:58.431 +02:00 [INF] Executed page /Account/Login in 56.5438ms
+2021-07-08 15:02:58.431 +02:00 [INF] Executed endpoint '/Account/Login'
+2021-07-08 15:02:58.433 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Identity/Account/Login - - - 200 - text/html;+charset=utf-8 82.6779ms
+2021-07-08 15:03:00.008 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Identity/Account/Login application/x-www-form-urlencoded 258
+2021-07-08 15:03:00.008 +02:00 [INF] Executing endpoint '/Account/Login'
+2021-07-08 15:03:00.009 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2021-07-08 15:03:00.063 +02:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal.LoginModel.OnPostAsync - ModelState is "Valid"
+2021-07-08 15:03:01.178 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-08 15:03:02.214 +02:00 [INF] Executed DbCommand (76ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2021-07-08 15:03:02.537 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2021-07-08 15:03:02.560 +02:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2021-07-08 15:03:02.564 +02:00 [INF] User logged in.
+2021-07-08 15:03:02.568 +02:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2021-07-08 15:03:02.573 +02:00 [INF] Executing LocalRedirectResult, redirecting to /.
+2021-07-08 15:03:02.575 +02:00 [INF] Executed page /Account/Login in 2565.7334ms
+2021-07-08 15:03:02.576 +02:00 [INF] Executed endpoint '/Account/Login'
+2021-07-08 15:03:02.587 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Identity/Account/Login application/x-www-form-urlencoded 258 - 302 - - 2579.6253ms
+2021-07-08 15:03:02.587 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/ - -
+2021-07-08 15:03:02.594 +02:00 [INF] Executing endpoint '/Index'
+2021-07-08 15:03:02.594 +02:00 [INF] Route matched with {page = "/Index", action = "", controller = "", area = ""}. Executing page /Index
+2021-07-08 15:03:02.594 +02:00 [INF] Executing handler method RestaurantReservation.Presentation.MVC.Pages.IndexModel.OnGet - ModelState is "Valid"
+2021-07-08 15:03:02.595 +02:00 [INF] Executed handler method OnGet, returned result .
+2021-07-08 15:03:02.595 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-07-08 15:03:02.595 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-07-08 15:03:02.602 +02:00 [INF] Executed page /Index in 7.9837ms
+2021-07-08 15:03:02.602 +02:00 [INF] Executed endpoint '/Index'
+2021-07-08 15:03:02.604 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/ - - - 200 - text/html;+charset=utf-8 16.2974ms
+2021-07-08 15:03:06.054 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation - -
+2021-07-08 15:03:06.068 +02:00 [INF] Authorization was successful.
+2021-07-08 15:03:06.071 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:06.085 +02:00 [INF] Route matched with {action = "Index", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:06.308 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ResturantReservationDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-08 15:03:06.508 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__date_Data_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ClientName], [r].[Note], [r].[NumberOfPeople], [r].[ReservationDate], [r].[TableNo], [t].[Id], [t].[No], [t0].[Id], [t0].[FoodTypeId], [t0].[ReservationId], [t0].[Id0], [t0].[FoodNameAr], [t0].[FoodNameEn], [t0].[FoodSellUnit]
+FROM [Reservation] AS [r]
+INNER JOIN [Table] AS [t] ON [r].[TableNo] = [t].[Id]
+LEFT JOIN (
+    SELECT [r0].[Id], [r0].[FoodTypeId], [r0].[ReservationId], [f].[Id] AS [Id0], [f].[FoodNameAr], [f].[FoodNameEn], [f].[FoodSellUnit]
+    FROM [ReservationFoods] AS [r0]
+    INNER JOIN [FoodType] AS [f] ON [r0].[FoodTypeId] = [f].[Id]
+) AS [t0] ON [r].[Id] = [t0].[ReservationId]
+WHERE CONVERT(date, [r].[ReservationDate]) = @__date_Data_0
+ORDER BY [r].[Id], [t].[Id], [t0].[Id], [t0].[Id0]
+2021-07-08 15:03:06.767 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC) in 681.2366ms
+2021-07-08 15:03:06.767 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:06.841 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation - - - 200 - text/html;+charset=utf-8 787.5034ms
+2021-07-08 15:03:07.183 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16
+2021-07-08 15:03:07.185 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:07.188 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:07.254 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 65.8659ms
+2021-07-08 15:03:07.254 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:07.256 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16 - 200 - application/json;+charset=utf-8 72.6584ms
+2021-07-08 15:03:07.273 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17
+2021-07-08 15:03:07.274 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:07.274 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:07.279 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 3.6434ms
+2021-07-08 15:03:07.279 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:07.288 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17 - 200 - application/json;+charset=utf-8 14.6234ms
+2021-07-08 15:03:07.316 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24
+2021-07-08 15:03:07.317 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:07.319 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:07.322 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 1.9542ms
+2021-07-08 15:03:07.322 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:07.326 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24 - 200 - application/json;+charset=utf-8 9.1323ms
+2021-07-08 15:03:07.348 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53
+2021-07-08 15:03:07.350 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:07.350 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:07.412 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 61.9128ms
+2021-07-08 15:03:07.412 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:07.413 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53 - 200 - application/json;+charset=utf-8 64.7941ms
+2021-07-08 15:03:07.433 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18
+2021-07-08 15:03:07.434 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:07.434 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:07.483 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 48.8165ms
+2021-07-08 15:03:07.483 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:07.483 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18 - 200 - application/json;+charset=utf-8 50.5167ms
+2021-07-08 15:03:07.501 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14
+2021-07-08 15:03:07.502 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:07.502 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:07.505 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 3.0532ms
+2021-07-08 15:03:07.505 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:07.517 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14 - 200 - application/json;+charset=utf-8 15.9063ms
+2021-07-08 15:03:07.543 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27
+2021-07-08 15:03:07.543 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:07.544 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:07.555 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 10.8735ms
+2021-07-08 15:03:07.555 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:07.559 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27 - 200 - application/json;+charset=utf-8 16.5526ms
+2021-07-08 15:03:10.176 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Identity/Account/Logout?returnUrl=%2FReservation%3Fpage%3D%252F application/x-www-form-urlencoded 225
+2021-07-08 15:03:10.191 +02:00 [INF] Executing endpoint '/Account/Logout'
+2021-07-08 15:03:10.200 +02:00 [INF] Route matched with {page = "/Account/Logout", area = "Identity", action = "", controller = ""}. Executing page /Account/Logout
+2021-07-08 15:03:10.202 +02:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal.LogoutModel.OnPost - ModelState is "Valid"
+2021-07-08 15:03:10.206 +02:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2021-07-08 15:03:10.206 +02:00 [INF] Executing LocalRedirectResult, redirecting to /Reservation?page=%2F.
+2021-07-08 15:03:10.206 +02:00 [INF] Executed page /Account/Logout in 5.8672ms
+2021-07-08 15:03:10.207 +02:00 [INF] Executed endpoint '/Account/Logout'
+2021-07-08 15:03:10.209 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Identity/Account/Logout?returnUrl=%2FReservation%3Fpage%3D%252F application/x-www-form-urlencoded 225 - 302 - - 32.5300ms
+2021-07-08 15:03:10.213 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation?page=%2F - -
+2021-07-08 15:03:10.216 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-07-08 15:03:10.220 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation?page=%2F - - - 302 - - 7.1439ms
+2021-07-08 15:03:10.224 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Identity/Account/Login?ReturnUrl=%2FReservation%3Fpage%3D%252F - -
+2021-07-08 15:03:10.224 +02:00 [INF] Executing endpoint '/Account/Login'
+2021-07-08 15:03:10.225 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2021-07-08 15:03:10.226 +02:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal.LoginModel.OnGetAsync - ModelState is "Valid"
+2021-07-08 15:03:10.226 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2021-07-08 15:03:10.226 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-07-08 15:03:10.226 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-07-08 15:03:10.230 +02:00 [INF] Executed page /Account/Login in 4.7646ms
+2021-07-08 15:03:10.230 +02:00 [INF] Executed endpoint '/Account/Login'
+2021-07-08 15:03:10.234 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Identity/Account/Login?ReturnUrl=%2FReservation%3Fpage%3D%252F - - - 200 - text/html;+charset=utf-8 9.6310ms
+2021-07-08 15:03:13.915 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Language/ChangeLanguage?culture=en-US - -
+2021-07-08 15:03:13.916 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.LanguageController.ChangeLanguage (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:13.918 +02:00 [INF] Route matched with {action = "ChangeLanguage", controller = "Language", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ChangeLanguage(System.String) on controller RestaurantReservation.Presentation.MVC.Controllers.LanguageController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:13.921 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.LanguageController.ChangeLanguage (RestaurantReservation.Presentation.MVC) in 2.6046ms
+2021-07-08 15:03:13.921 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.LanguageController.ChangeLanguage (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:13.923 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Language/ChangeLanguage?culture=en-US - - - 302 - - 8.8267ms
+2021-07-08 15:03:13.927 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Identity/Account/Login?ReturnUrl=%2FReservation%3Fpage%3D%252F - -
+2021-07-08 15:03:13.927 +02:00 [INF] Executing endpoint '/Account/Login'
+2021-07-08 15:03:13.927 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2021-07-08 15:03:13.928 +02:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal.LoginModel.OnGetAsync - ModelState is "Valid"
+2021-07-08 15:03:13.929 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2021-07-08 15:03:13.930 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-07-08 15:03:13.931 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-07-08 15:03:13.941 +02:00 [INF] Executed page /Account/Login in 13.6832ms
+2021-07-08 15:03:13.941 +02:00 [INF] Executed endpoint '/Account/Login'
+2021-07-08 15:03:13.942 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Identity/Account/Login?ReturnUrl=%2FReservation%3Fpage%3D%252F - - - 200 - text/html;+charset=utf-8 15.3295ms
+2021-07-08 15:03:16.258 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation - -
+2021-07-08 15:03:16.259 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-07-08 15:03:16.263 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation - - - 302 - - 4.7336ms
+2021-07-08 15:03:16.267 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Identity/Account/Login?ReturnUrl=%2FReservation - -
+2021-07-08 15:03:16.268 +02:00 [INF] Executing endpoint '/Account/Login'
+2021-07-08 15:03:16.268 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2021-07-08 15:03:16.269 +02:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal.LoginModel.OnGetAsync - ModelState is "Valid"
+2021-07-08 15:03:16.269 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2021-07-08 15:03:16.269 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-07-08 15:03:16.269 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-07-08 15:03:16.271 +02:00 [INF] Executed page /Account/Login in 3.1846ms
+2021-07-08 15:03:16.272 +02:00 [INF] Executed endpoint '/Account/Login'
+2021-07-08 15:03:16.273 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Identity/Account/Login?ReturnUrl=%2FReservation - - - 200 - text/html;+charset=utf-8 5.2378ms
+2021-07-08 15:03:17.533 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Identity/Account/Login?ReturnUrl=%2FReservation application/x-www-form-urlencoded 258
+2021-07-08 15:03:17.534 +02:00 [INF] Executing endpoint '/Account/Login'
+2021-07-08 15:03:17.534 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2021-07-08 15:03:17.536 +02:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal.LoginModel.OnPostAsync - ModelState is "Valid"
+2021-07-08 15:03:17.573 +02:00 [INF] User logged in.
+2021-07-08 15:03:17.573 +02:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2021-07-08 15:03:17.574 +02:00 [INF] Executing LocalRedirectResult, redirecting to /Reservation.
+2021-07-08 15:03:17.574 +02:00 [INF] Executed page /Account/Login in 39.4716ms
+2021-07-08 15:03:17.574 +02:00 [INF] Executed endpoint '/Account/Login'
+2021-07-08 15:03:17.575 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Identity/Account/Login?ReturnUrl=%2FReservation application/x-www-form-urlencoded 258 - 302 - - 41.7724ms
+2021-07-08 15:03:17.582 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation - -
+2021-07-08 15:03:17.583 +02:00 [INF] Authorization was successful.
+2021-07-08 15:03:17.583 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:17.583 +02:00 [INF] Route matched with {action = "Index", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:17.605 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC) in 21.7847ms
+2021-07-08 15:03:17.605 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:17.606 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation - - - 200 - text/html;+charset=utf-8 23.9977ms
+2021-07-08 15:03:17.754 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16
+2021-07-08 15:03:17.755 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:17.755 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:17.759 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 3.1154ms
+2021-07-08 15:03:17.759 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:17.761 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16 - 200 - application/json;+charset=utf-8 6.3396ms
+2021-07-08 15:03:17.768 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17
+2021-07-08 15:03:17.769 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:17.769 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:17.771 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.7637ms
+2021-07-08 15:03:17.771 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:17.772 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17 - 200 - application/json;+charset=utf-8 3.2007ms
+2021-07-08 15:03:17.780 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24
+2021-07-08 15:03:17.780 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:17.781 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:17.782 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 1.1281ms
+2021-07-08 15:03:17.782 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:17.783 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24 - 200 - application/json;+charset=utf-8 3.1423ms
+2021-07-08 15:03:17.789 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53
+2021-07-08 15:03:17.790 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:17.791 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:17.792 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 1.6771ms
+2021-07-08 15:03:17.793 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:17.794 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53 - 200 - application/json;+charset=utf-8 4.4138ms
+2021-07-08 15:03:17.802 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18
+2021-07-08 15:03:17.803 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:17.803 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:17.804 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.694ms
+2021-07-08 15:03:17.804 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:17.807 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18 - 200 - application/json;+charset=utf-8 5.3274ms
+2021-07-08 15:03:17.815 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14
+2021-07-08 15:03:17.816 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:17.816 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:17.817 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.984ms
+2021-07-08 15:03:17.817 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:17.819 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14 - 200 - application/json;+charset=utf-8 3.5588ms
+2021-07-08 15:03:17.826 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27
+2021-07-08 15:03:17.827 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:17.827 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:17.829 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 1.5252ms
+2021-07-08 15:03:17.830 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:17.832 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27 - 200 - application/json;+charset=utf-8 5.9497ms
+2021-07-08 15:03:20.806 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Identity/Account/Logout?returnUrl=%2FReservation%3Fpage%3D%252F application/x-www-form-urlencoded 225
+2021-07-08 15:03:20.808 +02:00 [INF] Executing endpoint '/Account/Logout'
+2021-07-08 15:03:20.808 +02:00 [INF] Route matched with {page = "/Account/Logout", area = "Identity", action = "", controller = ""}. Executing page /Account/Logout
+2021-07-08 15:03:20.809 +02:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal.LogoutModel.OnPost - ModelState is "Valid"
+2021-07-08 15:03:20.810 +02:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2021-07-08 15:03:20.810 +02:00 [INF] Executing LocalRedirectResult, redirecting to /Reservation?page=%2F.
+2021-07-08 15:03:20.810 +02:00 [INF] Executed page /Account/Logout in 1.2656ms
+2021-07-08 15:03:20.810 +02:00 [INF] Executed endpoint '/Account/Logout'
+2021-07-08 15:03:20.812 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Identity/Account/Logout?returnUrl=%2FReservation%3Fpage%3D%252F application/x-www-form-urlencoded 225 - 302 - - 5.8368ms
+2021-07-08 15:03:20.817 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation?page=%2F - -
+2021-07-08 15:03:20.818 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-07-08 15:03:20.819 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation?page=%2F - - - 302 - - 1.6537ms
+2021-07-08 15:03:20.823 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Identity/Account/Login?ReturnUrl=%2FReservation%3Fpage%3D%252F - -
+2021-07-08 15:03:20.824 +02:00 [INF] Executing endpoint '/Account/Login'
+2021-07-08 15:03:20.824 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2021-07-08 15:03:20.824 +02:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal.LoginModel.OnGetAsync - ModelState is "Valid"
+2021-07-08 15:03:20.825 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2021-07-08 15:03:20.825 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-07-08 15:03:20.825 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-07-08 15:03:20.828 +02:00 [INF] Executed page /Account/Login in 3.6079ms
+2021-07-08 15:03:20.828 +02:00 [INF] Executed endpoint '/Account/Login'
+2021-07-08 15:03:20.829 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Identity/Account/Login?ReturnUrl=%2FReservation%3Fpage%3D%252F - - - 200 - text/html;+charset=utf-8 5.3097ms
+2021-07-08 15:03:21.998 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Language/ChangeLanguage?culture=ar-EG - -
+2021-07-08 15:03:21.999 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.LanguageController.ChangeLanguage (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:21.999 +02:00 [INF] Route matched with {action = "ChangeLanguage", controller = "Language", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ChangeLanguage(System.String) on controller RestaurantReservation.Presentation.MVC.Controllers.LanguageController (RestaurantReservation.Presentation.MVC).
+2021-07-08 15:03:22.000 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.LanguageController.ChangeLanguage (RestaurantReservation.Presentation.MVC) in 0.6542ms
+2021-07-08 15:03:22.000 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.LanguageController.ChangeLanguage (RestaurantReservation.Presentation.MVC)'
+2021-07-08 15:03:22.003 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Language/ChangeLanguage?culture=ar-EG - - - 302 - - 5.2154ms
+2021-07-08 15:03:22.016 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Identity/Account/Login?ReturnUrl=%2FReservation%3Fpage%3D%252F - -
+2021-07-08 15:03:22.016 +02:00 [INF] Executing endpoint '/Account/Login'
+2021-07-08 15:03:22.016 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2021-07-08 15:03:22.017 +02:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal.LoginModel.OnGetAsync - ModelState is "Valid"
+2021-07-08 15:03:22.017 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2021-07-08 15:03:22.017 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-07-08 15:03:22.017 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-07-08 15:03:22.019 +02:00 [INF] Executed page /Account/Login in 2.6542ms
+2021-07-08 15:03:22.019 +02:00 [INF] Executed endpoint '/Account/Login'
+2021-07-08 15:03:22.021 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Identity/Account/Login?ReturnUrl=%2FReservation%3Fpage%3D%252F - - - 200 - text/html;+charset=utf-8 5.0154ms

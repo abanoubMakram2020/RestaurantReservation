@@ -10,6 +10,11 @@ namespace RestaurantReservation.Domain.Models
 {
     public class FoodType
     {
+
+        public FoodType()
+        {
+            ReservationFoods = new HashSet<ReservationFoods>();
+        }
         [Key]
         public int Id { get; set; }
 
@@ -25,8 +30,8 @@ namespace RestaurantReservation.Domain.Models
         public int FoodSellUnit { get; set; }
 
         [ForeignKey("FoodSellUnit")]
-        public virtual Unit Unit { get; set; }
+        public Unit Unit { get; set; }
 
-        public virtual ICollection<ReservationFoods> ReservationFoods { get; set; }
+        public ICollection<ReservationFoods> ReservationFoods { get; set; }
     }
 }

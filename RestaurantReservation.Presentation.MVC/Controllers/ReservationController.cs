@@ -7,6 +7,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Globalization;
+using SharedKernal.Middlewares.Basees;
 
 namespace RestaurantReservation.Presentation.MVC.Controllers
 {
@@ -14,6 +15,7 @@ namespace RestaurantReservation.Presentation.MVC.Controllers
     public class ReservationController : Controller
     {
         #region Fields
+        public Presenter Presenter { get; set; }
         private const string CONTROLLER_NAME = "Reservation";
         private const string VIEW_MAIN_PATH = "~/Views/";
 
@@ -36,24 +38,34 @@ namespace RestaurantReservation.Presentation.MVC.Controllers
             _tableService = tableService;
             _reservationFoodseService = reservationFoodseService;
             _reservationService = reservationService;
+            Presenter = new Presenter();
         }
 
         #endregion
 
         #region Actions
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View(_reservationService.GetReservationByDate(DateTime.Now.Date));
+            var reservationlst= await _reservationService.GetReservationByDate( new BaseRequestDto<DateTime>
+            {
+                Data = DateTime.Now.Date
+            });
+            return View(reservationlst.Result);
         }
 
-        public IActionResult CreateEdit(int? rservId)
+        public async Task<IActionResult> CreateEdit(int? rservId)
         {
             ReservationModel model = new ReservationModel();
 
             _FillViewBags();
             if (rservId != null)
-                model = _reservationService.FillReservationModel(rservId.Value);
-
+            {
+               var obj  = await _reservationService.FillReservationModel(new BaseRequestDto<int>
+                {
+                    Data = rservId.Value
+                });
+                model = obj.Result;
+            }
 
             return View(model);
         }
@@ -61,24 +73,18 @@ namespace RestaurantReservation.Presentation.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateEdit(ReservationModel reservationModel)
         {
-
-            await _reservationService.SaveReservation(reservationModel);
+           await _reservationService.SaveReservation( new BaseRequestDto<ReservationModel>
+            { Data = reservationModel });
 
             return RedirectToAction(nameof(Index));
         }
-        public IActionResult Delete(int rservId)
+        public async Task<IActionResult> Delete(int rservId)
         {
-            _reservationService.DeleteReservationById(rservId);
+            await _reservationService.DeleteReservationById( new BaseRequestDto<int> { Data = rservId });
             return RedirectToAction(nameof(Index));
         }
 
-        //[HttpPost]
-        //public JsonResult GetReservationFoods([FromBody] AjaxDTO ajaxDTO)
-        //{
-
-        //    return Json(_reservationFoodseService.GetReservationFoodsByReservationId(ajaxDTO.reservId));
-
-        //}
+     
         #endregion
 
 

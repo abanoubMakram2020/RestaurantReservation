@@ -1,0 +1,9 @@
+2021-07-08 17:05:05.772 +02:00 [INF] Executing ViewResult, running view Index.
+2021-07-08 17:05:05.846 +02:00 [INF] Executed ViewResult - view Index executed in 75.6994ms.
+2021-07-08 17:05:06.196 +02:00 [INF] Executing JsonResult, writing value of type 'System.String'.
+2021-07-08 17:05:06.239 +02:00 [INF] Executing JsonResult, writing value of type 'System.String'.
+2021-07-08 17:05:06.249 +02:00 [INF] Executing JsonResult, writing value of type 'System.String'.
+2021-07-08 17:05:06.323 +02:00 [INF] Executing JsonResult, writing value of type 'System.String'.
+2021-07-08 17:05:06.334 +02:00 [INF] Executing JsonResult, writing value of type 'System.String'.
+2021-07-08 17:05:06.344 +02:00 [INF] Executing JsonResult, writing value of type 'System.String'.
+2021-07-08 17:05:06.353 +02:00 [INF] Executing JsonResult, writing value of type 'System.String'.

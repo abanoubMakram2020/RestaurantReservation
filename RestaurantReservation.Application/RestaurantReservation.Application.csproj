@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\RestaurantReservation.Domain\RestaurantReservation.Domain.csproj" />
     <ProjectReference Include="..\RestaurantReservation.Infra.Data\RestaurantReservation.Infra.Data.csproj" />
+    <ProjectReference Include="..\SharedKernal.Middlewares\SharedKernal.Middlewares.csproj" />
   </ItemGroup>
 
   <ItemGroup>

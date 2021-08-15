@@ -9,6 +9,11 @@ namespace RestaurantReservation.Domain.Models
 {
     public class Unit
     {
+        public Unit()
+        {
+            FoodTypes = new HashSet<FoodType>();
+        }
+
         [Key]
         public int Id { get; set; }
         [Required]
@@ -17,6 +22,6 @@ namespace RestaurantReservation.Domain.Models
         [Required]
         [MaxLength(50)]
         public string NameEn { get; set; }
-        public virtual ICollection<FoodType> FoodTypes { get; set; }
+        public ICollection<FoodType> FoodTypes { get; set; }
     }
 }

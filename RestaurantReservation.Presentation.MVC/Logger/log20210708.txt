@@ -1,0 +1,85 @@
+2021-07-08 11:06:30.002 +02:00 [INF] User profile is available. Using 'C:\Users\A.Makram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-07-08 11:06:30.436 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-08 11:06:30.437 +02:00 [INF] Hosting environment: Development
+2021-07-08 11:06:30.437 +02:00 [INF] Content root path: D:\RestaurantReservation\RestaurantReservation.Presentation.MVC
+2021-07-08 11:06:30.521 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/ - -
+2021-07-08 11:06:30.928 +02:00 [INF] Executing endpoint '/Index'
+2021-07-08 11:06:30.995 +02:00 [INF] Route matched with {page = "/Index", action = "", controller = "", area = ""}. Executing page /Index
+2021-07-08 11:06:31.010 +02:00 [INF] Executing handler method RestaurantReservation.Presentation.MVC.Pages.IndexModel.OnGet - ModelState is "Valid"
+2021-07-08 11:06:31.016 +02:00 [INF] Executed handler method OnGet, returned result .
+2021-07-08 11:06:31.021 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-07-08 11:06:31.022 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-07-08 11:06:31.458 +02:00 [INF] Executed page /Index in 451.3683ms
+2021-07-08 11:06:31.459 +02:00 [INF] Executed endpoint '/Index'
+2021-07-08 11:06:31.516 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/ - - - 200 - text/html;+charset=utf-8 998.8262ms
+2021-07-08 11:07:49.685 +02:00 [INF] User profile is available. Using 'C:\Users\A.Makram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-07-08 11:07:50.123 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-08 11:07:50.135 +02:00 [INF] Hosting environment: Development
+2021-07-08 11:07:50.135 +02:00 [INF] Content root path: D:\RestaurantReservation\RestaurantReservation.Presentation.MVC
+2021-07-08 11:07:50.191 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/ - -
+2021-07-08 11:07:50.539 +02:00 [INF] Executing endpoint '/Index'
+2021-07-08 11:07:50.599 +02:00 [INF] Route matched with {page = "/Index", action = "", controller = "", area = ""}. Executing page /Index
+2021-07-08 11:07:50.613 +02:00 [INF] Executing handler method RestaurantReservation.Presentation.MVC.Pages.IndexModel.OnGet - ModelState is "Valid"
+2021-07-08 11:07:50.616 +02:00 [INF] Executed handler method OnGet, returned result .
+2021-07-08 11:07:50.622 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-07-08 11:07:50.623 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-07-08 11:07:50.858 +02:00 [INF] Executed page /Index in 250.9573ms
+2021-07-08 11:07:50.860 +02:00 [INF] Executed endpoint '/Index'
+2021-07-08 11:07:50.896 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/ - - - 200 - text/html;+charset=utf-8 707.8277ms
+2021-07-08 11:08:05.896 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation - -
+2021-07-08 11:08:05.912 +02:00 [INF] Authorization was successful.
+2021-07-08 11:08:05.913 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 11:08:05.939 +02:00 [INF] Route matched with {action = "Index", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 11:08:07.060 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ResturantReservationDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-08 11:08:10.238 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC) in 4298.7334ms
+2021-07-08 11:08:10.239 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 11:08:10.241 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: asdddd
+   at RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index() in D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\Controllers\ReservationController.cs:line 49
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-07-08 11:08:12.060 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-07-08 11:08:12.119 +02:00 [INF] Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-07-08 11:08:12.380 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-07-08 11:08:12.382 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2021-07-08 11:08:12.388 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2021-07-08 11:08:12.398 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation - - - 500 - text/html;+charset=utf-8 6501.8337ms

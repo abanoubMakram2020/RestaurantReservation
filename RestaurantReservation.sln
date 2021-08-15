@@ -11,7 +11,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReservation.Infra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReservation.Infra.IOC", "RestaurantReservation.Infra.IOC\RestaurantReservation.Infra.IOC.csproj", "{650C816F-2EEE-4169-A129-DEF0DB3F8E64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantReservation.Presentation.MVC", "RestaurantReservation.Presentation.MVC\RestaurantReservation.Presentation.MVC.csproj", "{B56724CF-454A-44A9-8BD5-A03DB7235CBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReservation.Presentation.MVC", "RestaurantReservation.Presentation.MVC\RestaurantReservation.Presentation.MVC.csproj", "{B56724CF-454A-44A9-8BD5-A03DB7235CBE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RestauranReservation.SharedKernal", "RestauranReservation.SharedKernal", "{757272E2-3819-4EA8-8EE8-88055D21FAB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedKernal.Core", "SharedKernal.Core", "{22B587FB-D20B-4863-8F5F-6813F0BE9CAE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedKernal.Middlewares", "SharedKernal.Middlewares", "{696A73BD-BAE7-4C52-BC6C-6059E7AB559E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReservation.Presentation.API", "RestaurantReservation.Presentation.API\RestaurantReservation.Presentation.API.csproj", "{EE9B4AA0-02A3-48CD-B420-E0B8A2A9F627}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernal.Core.Common", "SharedKernal.Core.Common\SharedKernal.Core.Common.csproj", "{DA48C8A7-A065-4B18-AB28-5B0D0FFDC88E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernal.Middlewares", "SharedKernal.Middlewares\SharedKernal.Middlewares.csproj", "{7767331E-A146-43E5-988C-34BFD43259F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +51,27 @@ Global
 		{B56724CF-454A-44A9-8BD5-A03DB7235CBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B56724CF-454A-44A9-8BD5-A03DB7235CBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B56724CF-454A-44A9-8BD5-A03DB7235CBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE9B4AA0-02A3-48CD-B420-E0B8A2A9F627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE9B4AA0-02A3-48CD-B420-E0B8A2A9F627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE9B4AA0-02A3-48CD-B420-E0B8A2A9F627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE9B4AA0-02A3-48CD-B420-E0B8A2A9F627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA48C8A7-A065-4B18-AB28-5B0D0FFDC88E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA48C8A7-A065-4B18-AB28-5B0D0FFDC88E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA48C8A7-A065-4B18-AB28-5B0D0FFDC88E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA48C8A7-A065-4B18-AB28-5B0D0FFDC88E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7767331E-A146-43E5-988C-34BFD43259F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7767331E-A146-43E5-988C-34BFD43259F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7767331E-A146-43E5-988C-34BFD43259F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7767331E-A146-43E5-988C-34BFD43259F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{22B587FB-D20B-4863-8F5F-6813F0BE9CAE} = {757272E2-3819-4EA8-8EE8-88055D21FAB0}
+		{696A73BD-BAE7-4C52-BC6C-6059E7AB559E} = {757272E2-3819-4EA8-8EE8-88055D21FAB0}
+		{DA48C8A7-A065-4B18-AB28-5B0D0FFDC88E} = {22B587FB-D20B-4863-8F5F-6813F0BE9CAE}
+		{7767331E-A146-43E5-988C-34BFD43259F6} = {696A73BD-BAE7-4C52-BC6C-6059E7AB559E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3FD712D6-D3C3-4845-80F5-CFEB67016322}

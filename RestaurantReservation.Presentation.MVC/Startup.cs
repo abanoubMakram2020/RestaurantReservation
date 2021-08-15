@@ -1,25 +1,20 @@
 using CleanArch.MVC.Configurations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Localization;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using RestaurantReservation.Application.Shared;
+using RestaurantReservation.Domain.Models;
 using RestaurantReservation.Infra.Data.Context;
 using RestaurantReservation.Infra.IOC;
-using RestaurantReservation.Presentation.MVC.Data;
-using System;
+using SharedKernal.Middlewares;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace RestaurantReservation.Presentation.MVC
 {
@@ -28,6 +23,7 @@ namespace RestaurantReservation.Presentation.MVC
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            Configuration.Initialize();
         }
 
         public IConfiguration Configuration { get; }
@@ -35,17 +31,10 @@ namespace RestaurantReservation.Presentation.MVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            #region DB Contexts
-            services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("ResturantReservationIdentityDBConnection")));
 
-            services.AddDbContext<ResturantReservationDBContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("ResturantReservationDBConnection")));
-            services.AddSingleton<LanguageService>();
-            #endregion
 
             #region Localization
-
+            services.AddSingleton<LanguageService>();
             services.AddLocalization(options => options.ResourcesPath = @"/RestaurantReservation/RestaurantReservation.Application/Resources");
 
             services.AddMvc().AddViewLocalization()
@@ -84,7 +73,8 @@ namespace RestaurantReservation.Presentation.MVC
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
             services.RegisterAutoMapper();
-            RegisterServices(services);
+
+            RegisterServices(services, Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -121,9 +111,9 @@ namespace RestaurantReservation.Presentation.MVC
                 endpoints.MapRazorPages();
             });
         }
-        private static void RegisterServices(IServiceCollection services)
+        private static void RegisterServices(IServiceCollection services, IConfiguration Configuration)
         {
-            DependencyContainer.RegisterServices(services);
+            DependencyContainer.RegisterServices(services, Configuration);
         }
     }
 }

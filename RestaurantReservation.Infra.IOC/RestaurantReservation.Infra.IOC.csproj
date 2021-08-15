@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RestaurantReservation.Application\RestaurantReservation.Application.csproj" />
+    <ProjectReference Include="..\SharedKernal.Middlewares\SharedKernal.Middlewares.csproj" />
   </ItemGroup>
 
 </Project>

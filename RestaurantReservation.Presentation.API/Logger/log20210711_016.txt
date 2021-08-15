@@ -1,0 +1,23 @@
+2021-07-11 13:12:51.259 +02:00 [INF] Route matched with {action = "Registration", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registration(RestaurantReservation.Application.DTOs.UserRegistrationDTO) on controller RestaurantReservation.Presentation.API.Controllers.AccountController (RestaurantReservation.Presentation.API).
+2021-07-11 13:12:51.685 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-07-11 13:12:51.712 +02:00 [INF] Executed action RestaurantReservation.Presentation.API.Controllers.AccountController.Registration (RestaurantReservation.Presentation.API) in 414.2535ms
+2021-07-11 13:13:34.459 +02:00 [INF] Route matched with {action = "Registration", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registration(RestaurantReservation.Application.DTOs.UserRegistrationDTO) on controller RestaurantReservation.Presentation.API.Controllers.AccountController (RestaurantReservation.Presentation.API).
+2021-07-11 13:13:34.463 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-07-11 13:13:34.464 +02:00 [INF] Executed action RestaurantReservation.Presentation.API.Controllers.AccountController.Registration (RestaurantReservation.Presentation.API) in 4.5267ms
+2021-07-11 13:14:00.624 +02:00 [INF] Route matched with {action = "Registration", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registration(RestaurantReservation.Application.DTOs.UserRegistrationDTO) on controller RestaurantReservation.Presentation.API.Controllers.AccountController (RestaurantReservation.Presentation.API).
+2021-07-11 13:14:00.644 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-07-11 13:14:00.645 +02:00 [INF] Executed action RestaurantReservation.Presentation.API.Controllers.AccountController.Registration (RestaurantReservation.Presentation.API) in 20.9223ms
+2021-07-11 13:14:03.550 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-07-11 13:14:18.423 +02:00 [INF] Route matched with {action = "Registration", controller = "Account", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registration(RestaurantReservation.Application.DTOs.UserRegistrationDTO) on controller RestaurantReservation.Presentation.API.Controllers.AccountController (RestaurantReservation.Presentation.API).
+2021-07-11 13:14:18.426 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-07-11 13:14:18.427 +02:00 [INF] Executed action RestaurantReservation.Presentation.API.Controllers.AccountController.Registration (RestaurantReservation.Presentation.API) in 3.4276ms
+2021-07-11 13:14:54.218 +02:00 [INF] User profile is available. Using 'C:\Users\A.Makram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-07-11 13:14:54.742 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-11 13:14:54.742 +02:00 [INF] Hosting environment: Development
+2021-07-11 13:14:54.742 +02:00 [INF] Content root path: D:\RestaurantReservation\RestaurantReservation.Presentation.API
+2021-07-11 13:14:54.797 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/index.html - -
+2021-07-11 13:14:54.992 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/index.html - - - 200 - text/html;charset=utf-8 195.5497ms
+2021-07-11 13:14:55.281 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - -
+2021-07-11 13:14:55.472 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44360/swagger/v1.0/swagger.json - - - 200 - application/json;charset=utf-8 190.4217ms
+2021-07-11 13:16:20.914 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44360/api/Account/Registration application/json 120
+2021-07-11 13:16:21.106 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.API.Controllers.AccountController.Registration (RestaurantReservation.Presentation.API)'

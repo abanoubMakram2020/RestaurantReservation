@@ -14,6 +14,8 @@ namespace CleanArch.Application.AutoMapper
             return new MapperConfiguration(cfg=>{
                 cfg.AddProfile(new ViewModelToDomainProfile());
                 cfg.AddProfile(new DomainToViewModelProfile());
+                cfg.AddProfile(new UserToUserDTOProfile());
+                cfg.AddProfile(new UserToUserRegistrationDTOProfile());
             });
            
 

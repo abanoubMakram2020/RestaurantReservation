@@ -1,0 +1,689 @@
+2021-07-08 14:01:02.176 +02:00 [INF] Executing ViewResult, running view  done.
+2021-07-08 14:01:02.205 +02:00 [ERR] The view ' done' was not found. Searched locations: ["/Views/Reservation/ done.ar-EG.cshtml","/Views/Reservation/ done.ar.cshtml","/Views/Reservation/ done.cshtml","/Views/Shared/ done.ar-EG.cshtml","/Views/Shared/ done.ar.cshtml","/Views/Shared/ done.cshtml","/Pages/Shared/ done.ar-EG.cshtml","/Pages/Shared/ done.ar.cshtml","/Pages/Shared/ done.cshtml"]
+2021-07-08 14:01:02.449 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-08 14:01:02.777 +02:00 [INF] Executed DbCommand (272ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-07-08 14:01:02.928 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-07-08 14:01:03.261 +02:00 [INF] Executed DbCommand (77ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-07-08 14:01:03.272 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2021-07-08 14:01:03.287 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2021-07-08 14:04:46.252 +02:00 [INF] User profile is available. Using 'C:\Users\A.Makram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-07-08 14:04:47.169 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-08 14:04:47.170 +02:00 [INF] Hosting environment: Development
+2021-07-08 14:04:47.170 +02:00 [INF] Content root path: D:\RestaurantReservation\RestaurantReservation.Presentation.MVC
+2021-07-08 14:04:47.283 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/ - -
+2021-07-08 14:04:47.975 +02:00 [INF] Executing endpoint '/Index'
+2021-07-08 14:04:48.094 +02:00 [INF] Route matched with {page = "/Index", action = "", controller = "", area = ""}. Executing page /Index
+2021-07-08 14:04:48.131 +02:00 [INF] Executing handler method RestaurantReservation.Presentation.MVC.Pages.IndexModel.OnGet - ModelState is "Valid"
+2021-07-08 14:04:48.150 +02:00 [INF] Executed handler method OnGet, returned result .
+2021-07-08 14:04:48.159 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2021-07-08 14:04:48.160 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2021-07-08 14:04:48.581 +02:00 [INF] Executed page /Index in 474.9062ms
+2021-07-08 14:04:48.583 +02:00 [INF] Executed endpoint '/Index'
+2021-07-08 14:04:48.600 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/ - - - 200 - text/html;+charset=utf-8 1322.9841ms
+2021-07-08 14:07:00.351 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation - -
+2021-07-08 14:07:00.409 +02:00 [INF] Authorization was successful.
+2021-07-08 14:07:00.411 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:00.441 +02:00 [INF] Route matched with {action = "Index", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:01.595 +02:00 [INF] Entity Framework Core 5.0.7 initialized 'ResturantReservationDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-08 14:07:07.350 +02:00 [INF] Executed DbCommand (78ms) [Parameters=[@__date_Data_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ClientName], [r].[Note], [r].[NumberOfPeople], [r].[ReservationDate], [r].[TableNo], [t].[Id], [t].[No], [t0].[Id], [t0].[FoodTypeId], [t0].[ReservationId], [t0].[Id0], [t0].[FoodNameAr], [t0].[FoodNameEn], [t0].[FoodSellUnit]
+FROM [Reservation] AS [r]
+INNER JOIN [Table] AS [t] ON [r].[TableNo] = [t].[Id]
+LEFT JOIN (
+    SELECT [r0].[Id], [r0].[FoodTypeId], [r0].[ReservationId], [f].[Id] AS [Id0], [f].[FoodNameAr], [f].[FoodNameEn], [f].[FoodSellUnit]
+    FROM [ReservationFoods] AS [r0]
+    INNER JOIN [FoodType] AS [f] ON [r0].[FoodTypeId] = [f].[Id]
+) AS [t0] ON [r].[Id] = [t0].[ReservationId]
+WHERE CONVERT(date, [r].[ReservationDate]) = @__date_Data_0
+ORDER BY [r].[Id], [t].[Id], [t0].[Id], [t0].[Id0]
+2021-07-08 14:07:13.699 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC) in 13256.9352ms
+2021-07-08 14:07:13.701 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:13.724 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation - - - 200 - text/html;+charset=utf-8 13373.5671ms
+2021-07-08 14:07:13.767 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/bootstrap/css/bootstrap.min.css - -
+2021-07-08 14:07:13.767 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/css/APP.css - -
+2021-07-08 14:07:13.767 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/dist/css/AdminLTE.min.css - -
+2021-07-08 14:07:13.769 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/plugins/datatables/dataTables.bootstrap.css - -
+2021-07-08 14:07:13.776 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/plugins/jQuery/jQuery-2.2.0.min.js - -
+2021-07-08 14:07:13.798 +02:00 [INF] Sending file. Request path: '/css/APP.css'. Physical path: 'D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\wwwroot\css\APP.css'
+2021-07-08 14:07:13.799 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/bootstrap/js/bootstrap.min.js - -
+2021-07-08 14:07:13.802 +02:00 [INF] Sending file. Request path: '/plugins/datatables/dataTables.bootstrap.css'. Physical path: 'D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\wwwroot\plugins\datatables\dataTables.bootstrap.css'
+2021-07-08 14:07:13.802 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/dist/css/skins/skin-blue.min.css - -
+2021-07-08 14:07:13.816 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/css/APP.css - - - 200 170 text/css 48.6319ms
+2021-07-08 14:07:13.842 +02:00 [INF] Sending file. Request path: '/dist/css/skins/skin-blue.min.css'. Physical path: 'D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\wwwroot\dist\css\skins\skin-blue.min.css'
+2021-07-08 14:07:13.847 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/plugins/datatables/dataTables.bootstrap.css - - - 200 8829 text/css 77.0802ms
+2021-07-08 14:07:13.847 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/dist/css/skins/skin-blue.min.css - - - 200 3199 text/css 44.0210ms
+2021-07-08 14:07:13.849 +02:00 [INF] Sending file. Request path: '/bootstrap/js/bootstrap.min.js'. Physical path: 'D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\wwwroot\bootstrap\js\bootstrap.min.js'
+2021-07-08 14:07:13.856 +02:00 [INF] Sending file. Request path: '/plugins/jQuery/jQuery-2.2.0.min.js'. Physical path: 'D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\wwwroot\plugins\jQuery\jQuery-2.2.0.min.js'
+2021-07-08 14:07:13.857 +02:00 [INF] Sending file. Request path: '/bootstrap/css/bootstrap.min.css'. Physical path: 'D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\wwwroot\bootstrap\css\bootstrap.min.css'
+2021-07-08 14:07:13.861 +02:00 [INF] Sending file. Request path: '/dist/css/AdminLTE.min.css'. Physical path: 'D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\wwwroot\dist\css\AdminLTE.min.css'
+2021-07-08 14:07:13.882 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/bootstrap/js/bootstrap.min.js - - - 200 36868 application/javascript 83.6204ms
+2021-07-08 14:07:13.883 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/plugins/jQuery/jQuery-2.2.0.min.js - - - 200 85589 application/javascript 107.3286ms
+2021-07-08 14:07:13.883 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/bootstrap/css/bootstrap.min.css - - - 200 121243 text/css 116.4488ms
+2021-07-08 14:07:13.892 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/dist/css/AdminLTE.min.css - - - 200 89850 text/css 124.6069ms
+2021-07-08 14:07:14.211 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/js/Helper.js - -
+2021-07-08 14:07:14.214 +02:00 [INF] Sending file. Request path: '/js/Helper.js'. Physical path: 'D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\wwwroot\js\Helper.js'
+2021-07-08 14:07:14.216 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/js/Helper.js - - - 200 465 application/javascript 4.7695ms
+2021-07-08 14:07:14.234 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/plugins/datatables/jquery.dataTables.js - -
+2021-07-08 14:07:14.256 +02:00 [INF] Sending file. Request path: '/plugins/datatables/jquery.dataTables.js'. Physical path: 'D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\wwwroot\plugins\datatables\jquery.dataTables.js'
+2021-07-08 14:07:14.311 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/plugins/datatables/jquery.dataTables.js - - - 200 440285 application/javascript 76.9003ms
+2021-07-08 14:07:14.314 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/plugins/datatables/dataTables.bootstrap.min.js - -
+2021-07-08 14:07:14.315 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/dist/js/app.min.js - -
+2021-07-08 14:07:14.339 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/js/CustomValidations.js - -
+2021-07-08 14:07:14.342 +02:00 [INF] Sending file. Request path: '/js/CustomValidations.js'. Physical path: 'D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\wwwroot\js\CustomValidations.js'
+2021-07-08 14:07:14.344 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/dist/img/user2-160x160.jpg - -
+2021-07-08 14:07:14.348 +02:00 [INF] Sending file. Request path: '/dist/img/user2-160x160.jpg'. Physical path: 'D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\wwwroot\dist\img\user2-160x160.jpg'
+2021-07-08 14:07:14.349 +02:00 [INF] Sending file. Request path: '/plugins/datatables/dataTables.bootstrap.min.js'. Physical path: 'D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\wwwroot\plugins\datatables\dataTables.bootstrap.min.js'
+2021-07-08 14:07:14.356 +02:00 [INF] Sending file. Request path: '/dist/js/app.min.js'. Physical path: 'D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\wwwroot\dist\js\app.min.js'
+2021-07-08 14:07:14.357 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/plugins/datatables/dataTables.bootstrap.min.js - - - 200 2065 application/javascript 43.2156ms
+2021-07-08 14:07:14.358 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/js/CustomValidations.js - - - 200 384 application/javascript 18.7394ms
+2021-07-08 14:07:14.399 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/dist/img/user2-160x160.jpg - - - 200 7070 image/jpeg 54.3177ms
+2021-07-08 14:07:14.400 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/dist/js/app.min.js - - - 200 9694 application/javascript 84.9996ms
+2021-07-08 14:07:14.541 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/dist/fonts/Vazir.woff - -
+2021-07-08 14:07:14.591 +02:00 [INF] Sending file. Request path: '/dist/fonts/Vazir.woff'. Physical path: 'D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\wwwroot\dist\fonts\Vazir.woff'
+2021-07-08 14:07:14.656 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/dist/fonts/Vazir.woff - - - 200 27676 application/font-woff 115.6025ms
+2021-07-08 14:07:14.693 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16
+2021-07-08 14:07:14.730 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:14.764 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:14.877 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 111.6638ms
+2021-07-08 14:07:14.877 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:14.915 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16 - 200 - application/json;+charset=utf-8 221.8278ms
+2021-07-08 14:07:14.960 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17
+2021-07-08 14:07:14.961 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:14.961 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:15.066 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 104.5103ms
+2021-07-08 14:07:15.067 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:15.068 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17 - 200 - application/json;+charset=utf-8 107.9508ms
+2021-07-08 14:07:15.080 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24
+2021-07-08 14:07:15.081 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:15.081 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:15.085 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 3.8269ms
+2021-07-08 14:07:15.085 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:15.090 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24 - 200 - application/json;+charset=utf-8 9.5936ms
+2021-07-08 14:07:15.102 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53
+2021-07-08 14:07:15.106 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:15.107 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:15.113 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 4.6975ms
+2021-07-08 14:07:15.113 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:15.122 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53 - 200 - application/json;+charset=utf-8 20.4270ms
+2021-07-08 14:07:15.159 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18
+2021-07-08 14:07:15.160 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:15.160 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:15.198 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 37.7586ms
+2021-07-08 14:07:15.198 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:15.199 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18 - 200 - application/json;+charset=utf-8 39.6971ms
+2021-07-08 14:07:15.208 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14
+2021-07-08 14:07:15.208 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:15.209 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:15.211 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 2.4526ms
+2021-07-08 14:07:15.212 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:15.212 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14 - 200 - application/json;+charset=utf-8 4.6749ms
+2021-07-08 14:07:15.220 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27
+2021-07-08 14:07:15.222 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:15.222 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:15.223 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.7253ms
+2021-07-08 14:07:15.224 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:15.227 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27 - 200 - application/json;+charset=utf-8 7.1561ms
+2021-07-08 14:07:15.407 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/bootstrap/fonts/glyphicons-halflings-regular.woff2 - -
+2021-07-08 14:07:15.413 +02:00 [INF] Sending file. Request path: '/bootstrap/fonts/glyphicons-halflings-regular.woff2'. Physical path: 'D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\wwwroot\bootstrap\fonts\glyphicons-halflings-regular.woff2'
+2021-07-08 14:07:15.413 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/bootstrap/fonts/glyphicons-halflings-regular.woff2 - - - 200 18028 font/woff2 6.6507ms
+2021-07-08 14:07:21.453 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Language/ChangeLanguage?culture=en-US - -
+2021-07-08 14:07:21.455 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.LanguageController.ChangeLanguage (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:21.458 +02:00 [INF] Route matched with {action = "ChangeLanguage", controller = "Language", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ChangeLanguage(System.String) on controller RestaurantReservation.Presentation.MVC.Controllers.LanguageController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:21.471 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.LanguageController.ChangeLanguage (RestaurantReservation.Presentation.MVC) in 13.2316ms
+2021-07-08 14:07:21.471 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.LanguageController.ChangeLanguage (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:21.473 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Language/ChangeLanguage?culture=en-US - - - 302 - - 20.3365ms
+2021-07-08 14:07:21.478 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation - -
+2021-07-08 14:07:21.480 +02:00 [INF] Authorization was successful.
+2021-07-08 14:07:21.480 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:21.480 +02:00 [INF] Route matched with {action = "Index", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:24.083 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC) in 2602.5101ms
+2021-07-08 14:07:24.083 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:24.085 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation - - - 200 - text/html;+charset=utf-8 2607.4389ms
+2021-07-08 14:07:24.140 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/dist/css/adminlte.min.css - -
+2021-07-08 14:07:24.145 +02:00 [INF] Sending file. Request path: '/dist/css/adminlte.min.css'. Physical path: 'D:\RestaurantReservation\RestaurantReservation.Presentation.MVC\wwwroot\dist\css\adminlte.min.css'
+2021-07-08 14:07:24.147 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/dist/css/adminlte.min.css - - - 200 89850 text/css 7.6383ms
+2021-07-08 14:07:24.240 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16
+2021-07-08 14:07:24.241 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:24.241 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:24.242 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.7844ms
+2021-07-08 14:07:24.242 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:24.243 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16 - 200 - application/json;+charset=utf-8 2.6510ms
+2021-07-08 14:07:24.249 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17
+2021-07-08 14:07:24.249 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:24.249 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:24.250 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.7068ms
+2021-07-08 14:07:24.250 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:24.252 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17 - 200 - application/json;+charset=utf-8 2.9935ms
+2021-07-08 14:07:24.257 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24
+2021-07-08 14:07:24.257 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:24.258 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:24.258 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.666ms
+2021-07-08 14:07:24.258 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:24.259 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24 - 200 - application/json;+charset=utf-8 2.3652ms
+2021-07-08 14:07:24.265 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53
+2021-07-08 14:07:24.266 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:24.266 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:24.268 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 1.8074ms
+2021-07-08 14:07:24.268 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:24.270 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53 - 200 - application/json;+charset=utf-8 4.7880ms
+2021-07-08 14:07:24.276 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18
+2021-07-08 14:07:24.277 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:24.277 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:24.279 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 1.3725ms
+2021-07-08 14:07:24.279 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:24.280 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18 - 200 - application/json;+charset=utf-8 3.6564ms
+2021-07-08 14:07:24.287 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14
+2021-07-08 14:07:24.288 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:24.288 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:24.289 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.6798ms
+2021-07-08 14:07:24.289 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:24.291 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14 - 200 - application/json;+charset=utf-8 2.7583ms
+2021-07-08 14:07:24.303 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27
+2021-07-08 14:07:24.304 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:24.304 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:24.305 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.9103ms
+2021-07-08 14:07:24.305 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:24.306 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27 - 200 - application/json;+charset=utf-8 2.7899ms
+2021-07-08 14:07:29.055 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Language/ChangeLanguage?culture=ar-EG - -
+2021-07-08 14:07:29.056 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.LanguageController.ChangeLanguage (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:29.056 +02:00 [INF] Route matched with {action = "ChangeLanguage", controller = "Language", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ChangeLanguage(System.String) on controller RestaurantReservation.Presentation.MVC.Controllers.LanguageController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:29.059 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.LanguageController.ChangeLanguage (RestaurantReservation.Presentation.MVC) in 2.0341ms
+2021-07-08 14:07:29.059 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.LanguageController.ChangeLanguage (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:29.061 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Language/ChangeLanguage?culture=ar-EG - - - 302 - - 5.5370ms
+2021-07-08 14:07:29.065 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation - -
+2021-07-08 14:07:29.067 +02:00 [INF] Authorization was successful.
+2021-07-08 14:07:29.067 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:29.068 +02:00 [INF] Route matched with {action = "Index", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:34.302 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC) in 5234.3171ms
+2021-07-08 14:07:34.302 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:34.303 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation - - - 200 - text/html;+charset=utf-8 5238.0653ms
+2021-07-08 14:07:34.427 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16
+2021-07-08 14:07:34.429 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:34.429 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:34.432 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 2.8801ms
+2021-07-08 14:07:34.432 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:34.433 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16 - 200 - application/json;+charset=utf-8 6.6932ms
+2021-07-08 14:07:34.442 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17
+2021-07-08 14:07:34.443 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:34.443 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:34.444 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.6533ms
+2021-07-08 14:07:34.444 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:34.445 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17 - 200 - application/json;+charset=utf-8 2.7442ms
+2021-07-08 14:07:34.454 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24
+2021-07-08 14:07:34.455 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:34.455 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:34.456 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.6655ms
+2021-07-08 14:07:34.456 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:34.457 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24 - 200 - application/json;+charset=utf-8 2.6080ms
+2021-07-08 14:07:34.465 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53
+2021-07-08 14:07:34.466 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:34.466 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:34.467 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.7712ms
+2021-07-08 14:07:34.467 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:34.468 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53 - 200 - application/json;+charset=utf-8 3.2376ms
+2021-07-08 14:07:34.475 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18
+2021-07-08 14:07:34.475 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:34.476 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:34.477 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.7339ms
+2021-07-08 14:07:34.477 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:34.477 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18 - 200 - application/json;+charset=utf-8 2.7049ms
+2021-07-08 14:07:34.485 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14
+2021-07-08 14:07:34.485 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:34.486 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:34.486 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.6702ms
+2021-07-08 14:07:34.487 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:34.488 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14 - 200 - application/json;+charset=utf-8 3.5533ms
+2021-07-08 14:07:34.495 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27
+2021-07-08 14:07:34.496 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:34.497 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:34.498 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.7206ms
+2021-07-08 14:07:34.498 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:34.499 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27 - 200 - application/json;+charset=utf-8 3.9191ms
+2021-07-08 14:07:37.436 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation/CreateEdit - -
+2021-07-08 14:07:37.438 +02:00 [INF] Authorization was successful.
+2021-07-08 14:07:37.438 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:37.448 +02:00 [INF] Route matched with {action = "CreateEdit", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateEdit(System.Nullable`1[System.Int32]) on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:37.730 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC) in 281.0163ms
+2021-07-08 14:07:37.730 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:37.731 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation/CreateEdit - - - 200 - text/html;+charset=utf-8 294.5611ms
+2021-07-08 14:07:37.827 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16
+2021-07-08 14:07:37.831 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:37.831 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:37.833 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 1.7674ms
+2021-07-08 14:07:37.833 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:37.835 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16 - 200 - application/json;+charset=utf-8 7.4854ms
+2021-07-08 14:07:37.840 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17
+2021-07-08 14:07:37.841 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:37.842 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:37.843 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.6637ms
+2021-07-08 14:07:37.843 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:37.845 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17 - 200 - application/json;+charset=utf-8 4.3386ms
+2021-07-08 14:07:37.851 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24
+2021-07-08 14:07:37.851 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:37.851 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:37.852 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.4887ms
+2021-07-08 14:07:37.852 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:37.853 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24 - 200 - application/json;+charset=utf-8 2.1404ms
+2021-07-08 14:07:37.861 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53
+2021-07-08 14:07:37.864 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:37.864 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:37.865 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.8821ms
+2021-07-08 14:07:37.866 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:37.868 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53 - 200 - application/json;+charset=utf-8 6.9719ms
+2021-07-08 14:07:37.873 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18
+2021-07-08 14:07:37.874 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:37.874 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:37.876 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.9167ms
+2021-07-08 14:07:37.876 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:37.877 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18 - 200 - application/json;+charset=utf-8 3.5147ms
+2021-07-08 14:07:37.884 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14
+2021-07-08 14:07:37.885 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:37.885 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:37.886 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.6417ms
+2021-07-08 14:07:37.886 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:37.887 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14 - 200 - application/json;+charset=utf-8 3.0230ms
+2021-07-08 14:07:37.898 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27
+2021-07-08 14:07:37.899 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:37.899 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:37.902 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 2.5494ms
+2021-07-08 14:07:37.903 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:37.903 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27 - 200 - application/json;+charset=utf-8 4.7579ms
+2021-07-08 14:07:48.774 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Reservation/CreateEdit application/x-www-form-urlencoded 428
+2021-07-08 14:07:48.781 +02:00 [INF] Authorization was successful.
+2021-07-08 14:07:48.781 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:48.788 +02:00 [INF] Route matched with {action = "CreateEdit", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateEdit(RestaurantReservation.Application.DTOs.ReservationModel) on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:52.698 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC) in 3909.4989ms
+2021-07-08 14:07:52.698 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.699 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Reservation/CreateEdit application/x-www-form-urlencoded 428 - 302 - - 3925.2283ms
+2021-07-08 14:07:52.704 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation - -
+2021-07-08 14:07:52.705 +02:00 [INF] Authorization was successful.
+2021-07-08 14:07:52.705 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.705 +02:00 [INF] Route matched with {action = "Index", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:52.712 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC) in 7.323ms
+2021-07-08 14:07:52.712 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.713 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation - - - 200 - text/html;+charset=utf-8 8.6722ms
+2021-07-08 14:07:52.817 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16
+2021-07-08 14:07:52.818 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.818 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:52.820 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 1.1952ms
+2021-07-08 14:07:52.820 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.823 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16 - 200 - application/json;+charset=utf-8 5.5029ms
+2021-07-08 14:07:52.831 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17
+2021-07-08 14:07:52.831 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.832 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:52.832 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.569ms
+2021-07-08 14:07:52.833 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.834 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17 - 200 - application/json;+charset=utf-8 3.0258ms
+2021-07-08 14:07:52.841 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24
+2021-07-08 14:07:52.842 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.842 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:52.843 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.6437ms
+2021-07-08 14:07:52.843 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.844 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24 - 200 - application/json;+charset=utf-8 2.2536ms
+2021-07-08 14:07:52.854 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53
+2021-07-08 14:07:52.855 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.855 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:52.856 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.612ms
+2021-07-08 14:07:52.856 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.859 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53 - 200 - application/json;+charset=utf-8 4.6085ms
+2021-07-08 14:07:52.870 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18
+2021-07-08 14:07:52.870 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.871 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:52.871 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.6133ms
+2021-07-08 14:07:52.871 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.872 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18 - 200 - application/json;+charset=utf-8 2.1190ms
+2021-07-08 14:07:52.878 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14
+2021-07-08 14:07:52.878 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.878 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:52.879 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.401ms
+2021-07-08 14:07:52.879 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.880 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14 - 200 - application/json;+charset=utf-8 1.8503ms
+2021-07-08 14:07:52.885 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27
+2021-07-08 14:07:52.885 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.886 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:52.887 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.8617ms
+2021-07-08 14:07:52.887 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:52.888 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27 - 200 - application/json;+charset=utf-8 3.7145ms
+2021-07-08 14:07:56.191 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation/CreateEdit?rservId=5 - -
+2021-07-08 14:07:56.192 +02:00 [INF] Authorization was successful.
+2021-07-08 14:07:56.193 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:56.193 +02:00 [INF] Route matched with {action = "CreateEdit", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateEdit(System.Nullable`1[System.Int32]) on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:58.860 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC) in 2666.8484ms
+2021-07-08 14:07:58.860 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:58.860 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation/CreateEdit?rservId=5 - - - 200 - text/html;+charset=utf-8 2668.8450ms
+2021-07-08 14:07:58.948 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16
+2021-07-08 14:07:58.949 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:58.949 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:58.951 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 1.3099ms
+2021-07-08 14:07:58.951 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:58.953 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16 - 200 - application/json;+charset=utf-8 4.9564ms
+2021-07-08 14:07:58.960 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17
+2021-07-08 14:07:58.960 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:58.961 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:58.961 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.5486ms
+2021-07-08 14:07:58.961 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:58.962 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17 - 200 - application/json;+charset=utf-8 2.1216ms
+2021-07-08 14:07:58.967 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24
+2021-07-08 14:07:58.968 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:58.968 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:58.969 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.9176ms
+2021-07-08 14:07:58.969 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:58.970 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24 - 200 - application/json;+charset=utf-8 2.3812ms
+2021-07-08 14:07:58.976 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53
+2021-07-08 14:07:58.977 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:58.977 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:58.978 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.5091ms
+2021-07-08 14:07:58.978 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:58.978 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53 - 200 - application/json;+charset=utf-8 2.1480ms
+2021-07-08 14:07:58.984 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18
+2021-07-08 14:07:58.985 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:58.985 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:58.986 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.6283ms
+2021-07-08 14:07:58.986 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:58.988 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18 - 200 - application/json;+charset=utf-8 2.6194ms
+2021-07-08 14:07:58.993 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14
+2021-07-08 14:07:58.994 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:58.994 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:58.995 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.5279ms
+2021-07-08 14:07:58.995 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:58.995 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14 - 200 - application/json;+charset=utf-8 1.9738ms
+2021-07-08 14:07:59.002 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27
+2021-07-08 14:07:59.002 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:59.002 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:07:59.003 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.4683ms
+2021-07-08 14:07:59.003 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:07:59.005 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27 - 200 - application/json;+charset=utf-8 3.5199ms
+2021-07-08 14:08:08.577 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Reservation/CreateEdit application/x-www-form-urlencoded 423
+2021-07-08 14:08:08.578 +02:00 [INF] Authorization was successful.
+2021-07-08 14:08:08.578 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:08.578 +02:00 [INF] Route matched with {action = "CreateEdit", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateEdit(RestaurantReservation.Application.DTOs.ReservationModel) on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:10.207 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC) in 1628.7014ms
+2021-07-08 14:08:10.207 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.209 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Reservation/CreateEdit application/x-www-form-urlencoded 423 - 302 - - 1631.9590ms
+2021-07-08 14:08:10.214 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation - -
+2021-07-08 14:08:10.215 +02:00 [INF] Authorization was successful.
+2021-07-08 14:08:10.215 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.215 +02:00 [INF] Route matched with {action = "Index", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:10.221 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC) in 6.1064ms
+2021-07-08 14:08:10.221 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.222 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation - - - 200 - text/html;+charset=utf-8 7.6879ms
+2021-07-08 14:08:10.305 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16
+2021-07-08 14:08:10.306 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.306 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:10.307 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.7305ms
+2021-07-08 14:08:10.307 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.309 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16 - 200 - application/json;+charset=utf-8 2.9488ms
+2021-07-08 14:08:10.316 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17
+2021-07-08 14:08:10.317 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.317 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:10.318 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.4664ms
+2021-07-08 14:08:10.318 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.318 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17 - 200 - application/json;+charset=utf-8 2.6357ms
+2021-07-08 14:08:10.324 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24
+2021-07-08 14:08:10.324 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.325 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:10.325 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.5986ms
+2021-07-08 14:08:10.325 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.326 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24 - 200 - application/json;+charset=utf-8 2.0002ms
+2021-07-08 14:08:10.332 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53
+2021-07-08 14:08:10.332 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.333 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:10.334 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 1.5465ms
+2021-07-08 14:08:10.334 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.335 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53 - 200 - application/json;+charset=utf-8 3.1038ms
+2021-07-08 14:08:10.340 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18
+2021-07-08 14:08:10.341 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.341 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:10.342 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.4398ms
+2021-07-08 14:08:10.342 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.342 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18 - 200 - application/json;+charset=utf-8 2.1695ms
+2021-07-08 14:08:10.347 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14
+2021-07-08 14:08:10.348 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.348 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:10.348 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.4544ms
+2021-07-08 14:08:10.348 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.349 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14 - 200 - application/json;+charset=utf-8 1.9439ms
+2021-07-08 14:08:10.355 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27
+2021-07-08 14:08:10.356 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.356 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:10.357 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.4672ms
+2021-07-08 14:08:10.357 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:10.357 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27 - 200 - application/json;+charset=utf-8 2.1540ms
+2021-07-08 14:08:17.962 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation/CreateEdit - -
+2021-07-08 14:08:17.965 +02:00 [INF] Authorization was successful.
+2021-07-08 14:08:17.966 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:17.966 +02:00 [INF] Route matched with {action = "CreateEdit", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateEdit(System.Nullable`1[System.Int32]) on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:17.971 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC) in 5.5096ms
+2021-07-08 14:08:17.971 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:17.972 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation/CreateEdit - - - 200 - text/html;+charset=utf-8 10.0750ms
+2021-07-08 14:08:18.061 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16
+2021-07-08 14:08:18.062 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:18.062 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:18.065 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 2.058ms
+2021-07-08 14:08:18.065 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:18.066 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16 - 200 - application/json;+charset=utf-8 5.3803ms
+2021-07-08 14:08:18.072 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17
+2021-07-08 14:08:18.073 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:18.074 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:18.074 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.5302ms
+2021-07-08 14:08:18.074 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:18.076 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17 - 200 - application/json;+charset=utf-8 3.1940ms
+2021-07-08 14:08:18.081 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24
+2021-07-08 14:08:18.082 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:18.082 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:18.083 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.4708ms
+2021-07-08 14:08:18.083 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:18.085 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24 - 200 - application/json;+charset=utf-8 3.3709ms
+2021-07-08 14:08:18.089 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53
+2021-07-08 14:08:18.089 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:18.090 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:18.090 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.4945ms
+2021-07-08 14:08:18.090 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:18.091 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53 - 200 - application/json;+charset=utf-8 1.9521ms
+2021-07-08 14:08:18.097 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18
+2021-07-08 14:08:18.098 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:18.098 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:18.099 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.4431ms
+2021-07-08 14:08:18.099 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:18.099 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18 - 200 - application/json;+charset=utf-8 2.1367ms
+2021-07-08 14:08:18.105 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14
+2021-07-08 14:08:18.106 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:18.106 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:18.107 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.4164ms
+2021-07-08 14:08:18.107 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:18.107 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14 - 200 - application/json;+charset=utf-8 1.9483ms
+2021-07-08 14:08:18.113 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27
+2021-07-08 14:08:18.114 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:18.114 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:18.115 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.742ms
+2021-07-08 14:08:18.115 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:18.117 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27 - 200 - application/json;+charset=utf-8 3.4390ms
+2021-07-08 14:08:26.236 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Reservation/CreateEdit application/x-www-form-urlencoded 428
+2021-07-08 14:08:26.238 +02:00 [INF] Authorization was successful.
+2021-07-08 14:08:26.238 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:26.238 +02:00 [INF] Route matched with {action = "CreateEdit", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateEdit(RestaurantReservation.Application.DTOs.ReservationModel) on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:28.306 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC) in 2067.405ms
+2021-07-08 14:08:28.306 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.CreateEdit (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.308 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Reservation/CreateEdit application/x-www-form-urlencoded 428 - 302 - - 2071.1718ms
+2021-07-08 14:08:28.316 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation - -
+2021-07-08 14:08:28.317 +02:00 [INF] Authorization was successful.
+2021-07-08 14:08:28.317 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.317 +02:00 [INF] Route matched with {action = "Index", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:28.329 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC) in 12.0428ms
+2021-07-08 14:08:28.329 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.333 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation - - - 200 - text/html;+charset=utf-8 17.2054ms
+2021-07-08 14:08:28.453 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16
+2021-07-08 14:08:28.454 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.454 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:28.455 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.5931ms
+2021-07-08 14:08:28.455 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.456 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16 - 200 - application/json;+charset=utf-8 3.1539ms
+2021-07-08 14:08:28.464 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17
+2021-07-08 14:08:28.465 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.465 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:28.466 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.4456ms
+2021-07-08 14:08:28.466 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.466 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17 - 200 - application/json;+charset=utf-8 1.8639ms
+2021-07-08 14:08:28.473 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24
+2021-07-08 14:08:28.474 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.474 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:28.475 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.4611ms
+2021-07-08 14:08:28.475 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.476 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24 - 200 - application/json;+charset=utf-8 2.8279ms
+2021-07-08 14:08:28.482 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53
+2021-07-08 14:08:28.482 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.482 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:28.483 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.489ms
+2021-07-08 14:08:28.483 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.485 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53 - 200 - application/json;+charset=utf-8 3.4160ms
+2021-07-08 14:08:28.489 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18
+2021-07-08 14:08:28.490 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.490 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:28.490 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.428ms
+2021-07-08 14:08:28.491 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.494 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18 - 200 - application/json;+charset=utf-8 4.4244ms
+2021-07-08 14:08:28.500 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14
+2021-07-08 14:08:28.501 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.501 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:28.502 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.6226ms
+2021-07-08 14:08:28.502 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.504 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14 - 200 - application/json;+charset=utf-8 4.2194ms
+2021-07-08 14:08:28.510 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27
+2021-07-08 14:08:28.511 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.511 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:28.512 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.562ms
+2021-07-08 14:08:28.512 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:28.513 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27 - 200 - application/json;+charset=utf-8 2.1607ms
+2021-07-08 14:08:34.117 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation/Delete?rservId=5 - -
+2021-07-08 14:08:34.117 +02:00 [INF] Authorization was successful.
+2021-07-08 14:08:34.118 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Delete (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.122 +02:00 [INF] Route matched with {action = "Delete", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:34.156 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Delete (RestaurantReservation.Presentation.MVC) in 33.5463ms
+2021-07-08 14:08:34.156 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Delete (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.157 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation/Delete?rservId=5 - - - 302 - - 40.2936ms
+2021-07-08 14:08:34.162 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation - -
+2021-07-08 14:08:34.163 +02:00 [INF] Authorization was successful.
+2021-07-08 14:08:34.163 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.163 +02:00 [INF] Route matched with {action = "Index", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:34.170 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC) in 7.0494ms
+2021-07-08 14:08:34.170 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.171 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation - - - 200 - text/html;+charset=utf-8 8.3268ms
+2021-07-08 14:08:34.249 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16
+2021-07-08 14:08:34.251 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.251 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:34.252 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 1.1846ms
+2021-07-08 14:08:34.253 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.255 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16 - 200 - application/json;+charset=utf-8 5.1590ms
+2021-07-08 14:08:34.263 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17
+2021-07-08 14:08:34.263 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.263 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:34.264 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.5305ms
+2021-07-08 14:08:34.264 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.266 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17 - 200 - application/json;+charset=utf-8 2.9743ms
+2021-07-08 14:08:34.272 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24
+2021-07-08 14:08:34.273 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.273 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:34.273 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.5921ms
+2021-07-08 14:08:34.274 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.276 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24 - 200 - application/json;+charset=utf-8 4.4292ms
+2021-07-08 14:08:34.281 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53
+2021-07-08 14:08:34.281 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.282 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:34.282 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.5301ms
+2021-07-08 14:08:34.282 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.283 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53 - 200 - application/json;+charset=utf-8 2.0142ms
+2021-07-08 14:08:34.289 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18
+2021-07-08 14:08:34.289 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.290 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:34.291 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.4771ms
+2021-07-08 14:08:34.291 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.296 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18 - 200 - application/json;+charset=utf-8 6.3676ms
+2021-07-08 14:08:34.302 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14
+2021-07-08 14:08:34.303 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.304 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:34.305 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.6747ms
+2021-07-08 14:08:34.305 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.306 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14 - 200 - application/json;+charset=utf-8 3.2175ms
+2021-07-08 14:08:34.319 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27
+2021-07-08 14:08:34.319 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.319 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:34.320 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.478ms
+2021-07-08 14:08:34.320 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:34.322 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27 - 200 - application/json;+charset=utf-8 3.3837ms
+2021-07-08 14:08:40.869 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation/Delete?rservId=1 - -
+2021-07-08 14:08:40.872 +02:00 [INF] Authorization was successful.
+2021-07-08 14:08:40.872 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Delete (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:40.872 +02:00 [INF] Route matched with {action = "Delete", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:40.889 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Delete (RestaurantReservation.Presentation.MVC) in 16.2389ms
+2021-07-08 14:08:40.889 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Delete (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:40.890 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation/Delete?rservId=1 - - - 302 - - 20.4515ms
+2021-07-08 14:08:40.898 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44342/Reservation - -
+2021-07-08 14:08:40.899 +02:00 [INF] Authorization was successful.
+2021-07-08 14:08:40.899 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:40.899 +02:00 [INF] Route matched with {action = "Index", controller = "Reservation", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller RestaurantReservation.Presentation.MVC.Controllers.ReservationController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:40.911 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC) in 11.5379ms
+2021-07-08 14:08:40.911 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.ReservationController.Index (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:40.911 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44342/Reservation - - - 200 - text/html;+charset=utf-8 13.2365ms
+2021-07-08 14:08:41.024 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16
+2021-07-08 14:08:41.026 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:41.026 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:41.028 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.9142ms
+2021-07-08 14:08:41.028 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:41.029 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 16 - 200 - application/json;+charset=utf-8 4.3897ms
+2021-07-08 14:08:41.035 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17
+2021-07-08 14:08:41.036 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:41.036 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:41.037 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.6578ms
+2021-07-08 14:08:41.037 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:41.040 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 17 - 200 - application/json;+charset=utf-8 4.8533ms
+2021-07-08 14:08:41.048 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24
+2021-07-08 14:08:41.067 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:41.067 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:41.069 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 1.7361ms
+2021-07-08 14:08:41.069 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:41.070 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 24 - 200 - application/json;+charset=utf-8 22.1992ms
+2021-07-08 14:08:41.078 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53
+2021-07-08 14:08:41.079 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:41.079 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:41.079 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.4252ms
+2021-07-08 14:08:41.080 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:41.080 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 53 - 200 - application/json;+charset=utf-8 2.0278ms
+2021-07-08 14:08:41.086 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18
+2021-07-08 14:08:41.087 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:41.087 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:41.087 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.4567ms
+2021-07-08 14:08:41.088 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:41.090 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 18 - 200 - application/json;+charset=utf-8 3.2613ms
+2021-07-08 14:08:41.094 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14
+2021-07-08 14:08:41.094 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:41.095 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:41.095 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.4072ms
+2021-07-08 14:08:41.095 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:41.096 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 14 - 200 - application/json;+charset=utf-8 1.8392ms
+2021-07-08 14:08:41.101 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27
+2021-07-08 14:08:41.101 +02:00 [INF] Executing endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:41.101 +02:00 [INF] Route matched with {action = "ReadFromResources", controller = "Common", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.JsonResult ReadFromResources(RestaurantReservation.Presentation.MVC.Controllers.DTO) on controller RestaurantReservation.Presentation.MVC.Controllers.CommonController (RestaurantReservation.Presentation.MVC).
+2021-07-08 14:08:41.102 +02:00 [INF] Executed action RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC) in 0.7927ms
+2021-07-08 14:08:41.102 +02:00 [INF] Executed endpoint 'RestaurantReservation.Presentation.MVC.Controllers.CommonController.ReadFromResources (RestaurantReservation.Presentation.MVC)'
+2021-07-08 14:08:41.103 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44342/Common/ReadFromResources application/json; 27 - 200 - application/json;+charset=utf-8 2.4558ms
